@@ -1,0 +1,119 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head>
+<title>7-Day Forecast for Latitude 37.27&deg;N and Longitude 107.88&deg;W (Elev. 6596 ft)</title><link rel="STYLESHEET" type="text/css" href="fonts/main.css"><script src="http://www.google.com/jsapi?key=ABQIAAAAIoZKb9JrajP0IwKLFr335hSDYIfhmdurPtzTcigVy3yzQfgIkBSylqDYKsdt6fRajY8B9sEqwWuQtQ&amp;client=gme-noaa" type="text/javascript"></script><script src="js/loader.js" type="text/javascript"></script><script src="js/GetData.js" type="text/javascript"></script><script src="gTopoMap.js" type="text/javascript"></script> <script src="gGeocode.js" type="text/javascript"></script><script type="text/javascript"> var smap=1; var gmmarine=0; var gmsite = 'gjt'; var gmscale =10; var gmsi=0; var gmlng='en'; </script></head><body leftmargin="0" topmargin="0" rightmargin="0" marginwidth="0" marginheight="0" bgcolor="#FFFFFF" text="#000000" background="images/wtf/gray_background.gif" onload="google.load('maps',2, {callback: function(){load(37.27000,-107.88000, [new GLatLng(37.254, -107.8935), new GLatLng(37.276, -107.896), new GLatLng(37.278, -107.868), new GLatLng(37.256, -107.8655), new GLatLng(37.254, -107.8935)])}});"><table cellspacing="0" cellpadding="0" border="0" width="670" background="images/wtf/topbanner.jpg"><tr><td height="19">&nbsp;&nbsp;&nbsp;</td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="670"><tr valign="top"><td rowspan="2"><a href="http://www.noaa.gov"><img src="images/wtf/noaaleft.jpg" alt="NOAA logo - Click to go to the NOAA homepage" title="NOAA logo - Click to go to the NOAA homepage" width="85" height="78" border="0"></a></td><td height="20"><img src="images/wtf/forecast_title.jpg" alt="Your National Weather Service forecast" title="Your National Weather Service forecast" width="500" height="20" border="0"></td><td rowspan="2" align="right"><a href="http://weather.gov"><img src="images/wtf/nwsright.jpg" alt="NWS logo" title="NWS logo" width="85" height="78" border="0"></a></td></tr><tr align="center"><td background="images/wtf/forecast_blank.jpg" height="57" class="white1">Hico, TX<a href="#contents"><img src="images/wtf/skipgraphic.gif" alt="Skip to Detailed 7-Day Forecast" title="Skip to Detailed 7-Day Forecast" width="1" height="1" border="0"></a></td></tr></table><table cellspacing="0" cellpadding="0" border="0" background="images/wtf/navbkgrnd.gif" width="670"><tr><td><img src="images/wtf/navbarleft.jpg" alt="" width="94" height="23" border="0"></td><td align="left" class="searchinput"><form method="POST" action="http://forecast.weather.gov/zipcity.php" style="display:inline"><span class="yellow">Enter Your &quot;City, ST&quot; or zip code </span><span class="searchinput"><input type="text" name="inputstring" size="15" value=""></span>&nbsp;&nbsp; <INPUT TYPE="submit" NAME="Go2" VALUE="Go"></form></td></tr></table><table width="670" border="0" align="left"><tr><td><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"><tr><td align="left" valign="center"><a href=http://www.crh.noaa.gov/gjt>NWS Grand Junction, CO</a><br><b>&nbsp;Point Forecast:</b> Durango CO<br>&nbsp;37.27&deg;N 107.88&deg;W  (Elev. 6596 ft)</td><td align="right" valign="bottom"><a href="http://www.srh.noaa.gov/cte.htm"><b>Mobile Weather Information</b></a><br><a href="/MapClick.php?CityName=Durango&state=CO&site=GJT&%20textField1=37.27&textField2=-107.88&e=0&lg=sp"><b>En Espa&ntilde;ol</b></a><br><a href="http://www.weather.gov/glossary/index.php?word=Last+update"><b>Last Update:</b></a> 7:09 am MDT Mar 9, 2009<br><a href="http://www.weather.gov/glossary/index.php?word=forecast+valid+for"><b>Forecast Valid:</b></a> 2pm MDT Mar 9, 2009-6pm MDT Mar 15, 2009</td>
+</tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tr><td align="left"></td>
+<td align="right"></td>
+</tr>
+<tr><td align="left" colspan="2">
+<img alt="Forecast at a Glance" title="Forecast at a Glance" src="images/wtf/7dayfcst.jpg">
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<table>
+     <script>
+          // Update with your specific grid location data
+          const office = 'OKX';
+          const gridX = 33;
+          const gridY = 37;
+          const apiUrl = `https://api.weather.gov/gridpoints/${office}/${gridX},${gridY}/forecast`;
+        
+          fetch(apiUrl)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok.');
+              }
+              return response.json();
+            })
+            .then(data => {
+              const periods = data.properties.periods;
+              const forecastRow = document.getElementById('forecastRow');
+              
+              // Clear existing content if necessary
+              forecastRow.innerHTML = '';
+        
+              periods.forEach(period => {
+                const td = document.createElement('td');
+                td.innerHTML = `
+                  <strong>${period.name}</strong><br>
+                  <img src="${period.icon}" alt="${period.shortForecast}" title="${period.shortForecast}" width="55" height="58"><br>
+                  ${period.shortForecast}<br>
+                  Temp: ${period.temperature}°${period.temperatureUnit}
+                `;
+                forecastRow.appendChild(td);
+              });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        </script>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr valign ="top">
+<td valign="top" align="left" width="50%">
+<br>
+<img alt="Detailed text forecast" src="images/wtf/fcst.jpg"><br><a name="contents"></a>
+Hazardous weather condition(s):<br><div align="center"><br><a href="showsigwx.php?warnzone=COZ022&warncounty=COC067&firewxzone=COZ207&local_place1=Durango+CO&product1=Hazardous+Weather+Outlook"><span class="warn">Hazardous Weather Outlook</span></a><br></div><br> 
+<b>This Afternoon: </b>Partly sunny, with a high near 54. South southwest wind between 10 and 15 mph. <br><br><b>Tonight: </b>A chance of rain and snow before midnight, then snow likely.  Cloudy, with a low around 25. Southwest wind between 10 and 15 mph.  Chance of precipitation is 60%. New snow accumulation of less than a half inch possible. <br><br><b>Tuesday: </b>Snow likely before noon, then a slight chance of rain and snow.  Cloudy, then gradually becoming mostly sunny, with a high near 47. Breezy, with a west southwest wind between 15 and 20 mph.  Chance of precipitation is 60%. New snow accumulation of less than a half inch possible. <br><br><b>Tuesday Night: </b>Mostly clear, with a low around 16. North northwest wind between 5 and 10 mph. <br><br><b>Wednesday: </b>Sunny, with a high near 54. North wind around 5 mph becoming calm. <br><br><b>Wednesday Night: </b>Partly cloudy, with a low around 20.  <br><br><b>Thursday: </b>Partly sunny, with a high near 54.  <br><br><b>Thursday Night: </b>A slight chance of rain and snow.  Mostly cloudy, with a low around 25.  <br><br><b>Friday: </b>A slight chance of rain and snow.  Mostly cloudy, with a high near 52.  <br><br><b>Friday Night: </b>Partly cloudy, with a low around 27.  <br><br><b>Saturday: </b>Mostly sunny, with a high near 57.  <br><br><b>Saturday Night: </b>Partly cloudy, with a low around 25.  <br><br><b>Sunday: </b>Mostly sunny, with a high near 58.  <br><br></td>
+<td valign="top" align="center" width="50%">
+<br>
+<img src="images/wtf/currentconds_down.jpg" width="326" height="20" border="0" alt="Current Local Weather" title="Current Local Weather" usemap="#ccbanner"><map name="ccbanner"><area shape="rect" coords="268,0,325,19" href="/MapClick.php?CityName=Durango&state=CO&site=GJT&%20textField1=37.27&textField2=-107.88&e=0&mp=0" alt="Move point forecast map up, and current conditions, radar, and satellite down." title="Move point forecast map up, and current conditions, radar, and satellite down."></map><table cellspacing="0" cellspacing="0" border="0" width="100%"><tr align="center"><td><span class="blue1">Durango/La Plata Co</span><br>Lat: 37.16 &nbsp; Lon: -107.75 &nbsp; Elev: 6686<br>Last Update on Mar 9, 12:53 pm MDT<br><br></td></tr><tr>
+ <td colspan="2"><table cellspacing="0" cellpadding="0" border="0">
+ <tr>
+ <td class="big" width="120" align="center">Partly Cloudy<br><br>44 &deg;F<br>(7 &deg;C)</td>
+ <td rowspan="2" width="200"><table cellspacing="0" cellpadding="2" border="0" width="100%">
+ <tr bgcolor="#b0c4de">
+ <td><b>Humidity</b>:</td>
+ <td align="right">51 %</td>
+ </tr>
+ <tr bgcolor="#ffefd5">
+ <td><b>Wind Speed</b>:</td>
+ <td align="right">S 6 MPH</td>
+ </tr>
+ <tr bgcolor="#b0c4de">
+ <td><b>Barometer</b>:</td>
+ <td align="right" nowrap>29.90&quot; (1012.1 mb)</td>
+ </tr>
+ <tr bgcolor="#ffefd5">
+ <td><b>Dewpoint</b>:</td>
+ <td align="right">27 &deg;F (-3 &deg;C)</td>
+ </tr><tr bgcolor="#b0c4de">
+      <td><b>Wind Chill</b>:</td>
+      <td align="right">41 &deg;F (5 &deg;C)</td>
+      </tr><tr bgcolor="#ffefd5">
+ <td><b>Visibility</b>:</td>
+ <td align="right">10.00 mi.</td>
+ </tr><tr><td nowrap><b><a href="obslocal.php?warnzone=COZ022&local_place=Durango+CO&zoneid=MDT&offset=21600" class="link">More Local Wx</a></b>:</td><td nowrap align="right"><b><a href="http://www.weather.gov/data/obhistory/KDRO.html" class="link">3 Day History</a></b>:</td></tr>
+         </table></td></tr>
+
+	    </table></td></tr><tr valign ="top"><td valign="top" align="center" width="50%"><img title="Radar and Satellite (Click for larger image)" alt="Radar and Satellite (Click for larger image)" src="images/wtf/radandsat.jpg"><br><a href="http://radar.weather.gov/radar.php?rid=gjx&product=N0R&overlay=11101111&loop=no"><img src="http://radar.weather.gov/Thumbs/GJX_Thumb.gif" width="130" height="130" border="0" alt="Link to Local Radar Data" title="Link to Local Radar Data"></a>&nbsp;<a href="http://www.goes.noaa.gov/WCIR4.html"><img src="http://forecast.weather.gov/satellite/thumbs/WCI8.JPG" width="173" height="130" border="0" alt="Link to Satellite Data" title="Link to Satellite Data"></a><br><br></td></tr></table><img src="images/wtf/dpoint_forecast_up.jpg" width="326" height="20" border="0" class="noprint" alt="Detailed point forecasts" title="Detailed point forecasts" usemap="#dpbanner"><map name="dpbanner"><area shape="rect" coords="268,0,325,19" href="/MapClick.php?CityName=Durango&state=CO&site=GJT&%20textField1=37.27&textField2=-107.88&e=0&mp=0" alt="Move point forecast map up, and current conditions, radar, and satellite down." title="Move point forecast map up, and current conditions, radar, and satellite down."></map><table width="100%" border="0" class="noprint"><tr><td align="center">Click Map for Forecast&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.weather.gov/credits.php#googlemapping">Disclaimer</a></td></tr><tr><td align="center"><form name="littleform" method="POST" action="MapClick.php"><div style="width: 320px; text-align: left;"><div id="gmap" style="width: 320px; height: 250px; align: left;"><noscript><center><br><br><b>Map function requires Javascript and a compatible browser.</b></center></noscript></div></div><div><img src="images/wtf/maplegend.gif" width="240" height="16"></div><b>Lat/Lon:</b> 37.27&deg;N 107.88&deg;W&nbsp;&nbsp; <b>Elevation:</b>6596 ft</form><form method="POST" action="http://forecast.weather.gov/zipcity.php" onsubmit="getLocationResults(this.mapLocationSearch, document.getElementById('mapShowLocations'), document.getElementById('mapProgressIcon')); return false;"><img id="mapProgressIcon" src="images/wtf/clear.gif" width="16" height="16"><a href="http://forecast.weather.gov//MapClick.php?CityName=Durango&amp;state=CO&amp;site=GJT&amp;%20textField1=37.27&amp;textField2=-107.88&amp;e=0&amp;FcstType=kml"><img src="images/wtf/kml-small.jpg" alt="Get as KML" title="Get as KML"></a><div style="position: relative; width: 250px; height: 1px; align: left;"><div id="mapShowLocations" style="position: absolute; display: none; width: 250px; background-color: #CCCCFF; border: 2px solid #9999FF; padding: 4px; opacity: 0.95; -moz-border-radius: 5px; -webkit-border-radius: 5px;"><input type="button" value="Close" onclick="document.getElementById('mapShowLocations').style.display = 'none';"></div><img src="images/wtf/clear.gif" width="250" height="1"></div></form></td></tr></table></td></tr>
+<tr valign ="top">
+<td valign="top" align="left" width="50%">
+ <img alt="National Digital Forecast Database (Click for larger image)" title="National Digital Forecast Database (Click for larger image)" src="images/wtf/ndfd-banner.jpg">
+ <br>
+ <a href="http://www.weather.gov/forecasts/graphical/sectors/centrockies.php?element=MaxT"><img src="http://www.weather.gov/forecasts/graphicalimages/thumbnail/latest_MaxMinT_centrockies_thumbnail.png" border="0" alt="National Digital Forecast Database Maximum Temperature Forecast" title="National Digital Forecast Database Maximum Temperature Forecast"></a>
+ <a href="http://www.weather.gov/forecasts/graphical/sectors/centrockies.php?element=Wx"><img src="http://www.weather.gov/forecasts/graphicalimages/thumbnail/latest_Wx_centrockies_thumbnail.png" border="0" alt="National Digital Forecast Database Weather Element Forecast" title="National Digital Forecast Database Weather Element Forecast"></a>
+</td>
+<td valign="top" align="left" width="50%">
+ <img alt="Additional Forecasts and Information" title="Additional Forecasts and Information" src="images/wtf/addinfosml.jpg">
+ <br>
+ <table cellspacing="0" cellpadding="1" border="0" width="320">
+<tr bgcolor="#ffefd5"><td colspan="2" align="center"><a href="http://forecast.weather.gov/MapClick.php?zoneid=COZ022">Zone Area Forecast for Animas River Basin, CO</a></td></tr><tr bgcolor="#b0c4de"><td colspan="2" align="center"><a href="http://forecast.weather.gov/product.php?site=NWS&issuedby=GJT&product=AFD&format=CI&version=1&glossary=1">Forecast Discussion</a></td></tr><tr bgcolor="ffefd5"><td><a href="http://forecast.weather.gov/MapClick.php?CityName=Durango&state=CO&site=GJT&%20textField1=37.27&textField2=-107.88&e=0&TextType=2" target="_blank">Printable Forecast</a></td>
+<td><a href="http://forecast.weather.gov/MapClick.php?CityName=Durango&state=CO&site=GJT&%20textField1=37.27&textField2=-107.88&e=0&TextType=1" target="_blank">Text Only Forecast</a></td>
+</tr>
+<tr bgcolor="#b0c4de"><td><a href="http://forecast.weather.gov/MapClick.php?CityName=Durango&state=CO&site=GJT&%20textField1=37.27&textField2=-107.88&e=0&FcstType=graphical">Hourly Weather Graph</a></td>
+<td><a href="http://forecast.weather.gov/MapClick.php?CityName=Durango&state=CO&site=GJT&%20textField1=37.27&textField2=-107.88&e=0&FcstType=digital">Tabular Forecast</a></td>
+</tr>
+<tr bgcolor="ffefd5"><td><a href="http://forecast.weather.gov/MapClick.php?CityName=Durango&state=CO&site=GJT&%20textField1=37.27&textField2=-107.88&e=0&unit=1">International System of Units</a></td>
+<td><a href="http://www.srh.weather.gov/srh/jetstream/webweather/pinpoint_max.htm">About Point Forecasts</a></td>
+</tr>
+<tr bgcolor="#b0c4de"><td align="left"><a href="http://www.crh.noaa.gov/gjt/Hazards/warnings.php" target="_self">Hazardous Weather</a></td><td align="left"><a href="http://www.crh.noaa.gov/product.php?site=gjt&product=AFD&issuedby=gjt" target="_self">Area Forecast Discussion (if above link is not working)</a></td></tr>
+<tr bgcolor="#ffefd5"><td align="left"><a href="http://www.crh.noaa.gov/product.php?site=gjt&product=RTP&issuedby=gjt" target="_self">Regional Weather Conditions</a></td><td align="left"><a href="http://www.crh.noaa.gov/product.php?site=gjt&product=LSR&issuedby=gjt" target="_self">Local Storm Reports</a></td></tr>
+<tr bgcolor="#b0c4de"><td align="left"><a href="http://www.weather.gov/climate/index.php?wfo=gjt" target="_self">Climate Information</a></td><td align="left"><a href="http://raws.wrh.noaa.gov/cgi-bin/roman/raws_ca_monitor.cgi?state=GJT&rawsflag=2" target="_self">RAWS Information</a></td></tr>
+<tr bgcolor="#ffefd5"><td align="left"><a href="http://www.crh.noaa.gov/gjt/Conditions/road_conditions.php" target="_self">Road Conditions</a></td><td align="left"><a href="http://www.crh.noaa.gov/ifps/ifps.php?site=gjt" target="_self">Graphical Forecast Page</a></td></tr>
+<tr bgcolor="#b0c4de"><td align="left"><a href="http://www.crh.noaa.gov/product.php?site=gjt&product=PFM&issuedby=gjt" target="_self">Digital Forecast</a></td><td align="left"><a href="http://raws.wrh.noaa.gov/roman/cwa/GJT_frame.html" target="_self">ROMAN Weather Observations</a></td></tr>
+<tr bgcolor="#ffefd5"><td align="left"><a href="http://www.crh.noaa.gov/gjt/Forecasts/firewx.php" target="_self">Fire Weather Information</a></td><td align="left"><a href="http://www.crh.noaa.gov/product.php?site=gjt&product=SYN&issuedby=gjt" target="_self">Weather Synopsis</a></td></tr>
+<tr bgcolor="#b0c4de"><td align="left"><a href="http://www.crh.noaa.gov/gjt/Weather_Info/avalanche.php" target="_self">Avalanche Information</a></td><td align="left"><a href="http://www.crh.noaa.gov/product.php?site=gjt&product=PNS&issuedby=gjt" target="_self">Public Information Statement</a></td></tr>
+</table></td></tr><tr valign="top"><td class="gray" align="left" colspan="2"><table border="0" width="100%"><tr><td colspan="3"><hr width="100%" size="2" noshade></td></tr><tr valign="top"><td class="gray" align="left" width="40%"><a href="mailto:w-gjt.webmaster@noaa.gov">Webmaster</a><br>National Weather Service:<br> Grand Junction, CO</td><td align="center" width="30%"><form><input type="button" value="Back to Previous Page" onClick="history.back()"></form></td><td align="right" width="30%" class="gray"><a href="http://www.weather.gov"<u>www.weather.gov</u></a><br><a href="http://weather.gov/privacy.php">Privacy Policy</a><br><a href="http://weather.gov/disclaimer.php">Disclaimer</a></td></tr></table></td></tr></table></td></tr></table></body>
+</html>

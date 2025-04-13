@@ -1,0 +1,41 @@
+body.nonav670, body.nav800, body.nav1024 {background:none; font-family:"Times New Roman",Times,serif; margin:0px; padding:0px; width:100%; font-size:11pt}
+
+#leftnav, #noaalink, #nwslink800, #nwslink670, #nwslink, #nwslink1024, #topnav670, #topnav800, #topnav1024, .topnav1024, .topnav800, #tag1024, #footer1024td1, #footer1024td3, #footer1024td4, #footer800, #footer800td1, #footer800td3, #footer800td4, .skipnav, #noprint, .noprint, #footer670, .header1024  {display:none}
+
+.title_small_italic {color:#000}
+
+#noaalogo {position:absolute; top:0px; left:0px;}
+#nwslogo {position:absolute; top:0px; left:590px;}
+
+.header670, .header800 {background:none; text-align:center;}
+div.figure {margin-left:auto; margin-right:auto; width:600px}
+div.figure p {text-align:center}
+.title_small {color:#000; font-size:14pt; margin:0px; padding:0px}
+.title_large {color:#000; font-size:21pt; margin:0px; padding:0px}
+
+h3 {font-size:18pt; text-align:center}
+
+#mainnav1024, #mainnonav670 {width:100%; margin:0px}
+#footer1024 {top:-20px}
+pre {padding:0px; margin:0px}
+
+/*
+     FILE ARCHIVED ON 17:29:18 Oct 26, 2008 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:09:11 Apr 11, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.581
+  exclusion.robots: 0.033
+  exclusion.robots.policy: 0.023
+  esindex: 0.01
+  cdx.remote: 9.674
+  LoadShardBlock: 476.811 (6)
+  PetaboxLoader3.datanode: 205.455 (7)
+  PetaboxLoader3.resolve: 508.271 (2)
+  load_resource: 361.014
+*/

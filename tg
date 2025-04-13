@@ -1,0 +1,413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0022)http://weather.gov/tg/ -->
+<HTML lang=en><HEAD><TITLE>NWS Telecommunications Operations Center Home Page - The documentation and descriptions of practices of the Center</TITLE><LINK 
+href="/main.css" type=text/css rel=STYLESHEET>
+<META Name="DC.title" content="NWS Telecommunication Gateway">
+<META Name="DC.description" content="Introduction to the NWS Telecommunication Gateway web site">
+<META Name="DC.creator" content="U.S. Department of Commerce, NOAA, NWS">
+<META Name="DC.date.created" content="2003-01-01" scheme="ISO8601">
+<META Name="DC.date.reviewed" content="2005-10-19" scheme="ISO8601">
+<META Name="DC.language" content="EN-US">
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content=global name=distribution>
+<META 
+content="National Weather Service Telecommunication Operations Center Web Team" 
+name=author>
+<META content=all name=robot>
+<META http-equiv=Window-target content=_top>
+<SCRIPT language=JAVASCRIPT type=text/javascript>
+<!--
+function init() {
+if (top.frames.length!=0)
+top.location=self.document.location; 
+}
+thisurl=document.location.href;
+function doArray() {
+    var arylnth = doArray.arguments.length;
+    for ( i = 0 ; i < arylnth ; i++ ) { this[i]=doArray.arguments[i] }
+}
+ function translate6(LP){
+qstring="http://weather.gov/dm-cgi-bin/xlator.pl?LP="+LP+"&LPURL="+thisurl;
+window.location=qstring;}
+
+function statepage1() {
+    var choose = eval(document.dropdown2.state1.selectedIndex);
+    if( (choose >= 1) && (choose < 55) ) {
+        var section=new doArray(
+                '',
+                'javascript:void window.open("http://weather.gov/tg/Alabama.html","AL","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Alaska.html","AK","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Arizona.html","AZ","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Arkansas.html","AR","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Calif.html","CA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Colorado.html","CO","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Conn.html","CT","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Delaware.html","DE","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/DC.html","DC","width=530,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Florida.html","FL","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Georgia.html","GA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Hawaii.html","HI","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Idaho.html","ID","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Illinois.html","IL","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Indiana.html","IN","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Iowa.html","IA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Kansas.html","KS","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Kentucky.html","KY","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Louisiana.html","LA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Maine.html","ME","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Maryland.html","MD","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Mass.html","MA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Michigan.html","MI","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Minn.html","MN","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Miss.html","MS","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Missouri.html","MO","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Montana.html","MT","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Nebraska.html","NE","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Nevada.html","NV","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/NewHam.html","NH","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Jersey.html","NJ","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Newmex.html","NM","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/NewYork.html","NY","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/NorthCaro.html","NC","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/NorthDak.html","ND","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Ohio.html","OH","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Oklahoma.html","OK","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Oregon.html","OR","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Penn.html","PA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Puerto.html","PR","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/RhodeIsl.html","RI","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/SouthCaro.html","SC","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/SouthDak.html","SD","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Tenn.html","TN","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Texas.html","TX","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Utah.html","UT","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Vermont.html","VT","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Virginia.html","VA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Virgin.html","VA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Washington.html","WA","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/WestVirg.html","WV","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Wisconsin.html","WI","width=450,height=350,scrollbars,toolbar")',
+                'javascript:void window.open("http://weather.gov/tg/Wyoming.html","WY","width=450,height=350,scrollbars,toolbar")');
+        
+        var targetloc=section[document.dropdown2.state1.selectedIndex];
+        document.dropdown2.state1.options[document.dropdown2.state1.selectedIndex].selected = false;
+        document.dropdown2.state1.options[0].selected = true;
+        location=targetloc;
+    }
+}
+
+// end generated JavaScript. -->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2800.1141" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 rightMargin=0 marginheight="0" 
+marginwidth="0">
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background=/images/topbanner.jpg border=0>
+  <TBODY>
+  <TR>
+    <TD align=right><A href="http://weather.gov/tg/#contents"><IMG height=1 
+      alt="Skip Navigation Link" src="/images/skipgraphic.gif" width=1 
+      border=0></A><A href="http://www.nws.noaa.gov/"><SPAN 
+      class=nwslink>weather.gov</SPAN></A>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD rowSpan=2><A href="http://www.noaa.gov/"><IMG height=78 
+      alt="NOAA logo - Select to go to the NOAA homepage" 
+      src="/images/noaaleft.jpg" width=85 border=0></A></TD>
+    <TD align=left><IMG height=20 
+      alt="National Weather Service Headquarters Office" 
+      src="/officenames/top_nws_title.jpg" width=500 border=0></TD>
+    <TD width="100%" rowSpan=2><IMG height=78 src="/images/wfo_bkgrnd.jpg" 
+      width="100%" border=0></TD>
+    <TD align=right rowSpan=2><IMG height=78 alt="NWS logo" 
+      src="/images/nwsright.jpg" width=85 border=0></TD></TR>
+  <TR>
+    <TD><IMG height=58 
+      alt="NWS Office of the Chief Information Officer/Telecommunication Operations Center" 
+      src="/officenames/toc_name.jpg" width=500 border=0></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background=/images/navbkgrnd.gif border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=left width=94><IMG height=23 alt="" 
+      src="/images/navbarleft.jpg" width=94 border=0></TD> <TD class=nav id=menuitem align=middle width="10%"><A 
+      href="http://weather.gov/sitemap.html">Site Map</A></TD>
+    
+<TD class=nav id=menuitem align=right width="10%"><A 
+      href="http://weather.gov/pa">News</A></TD>
+    <TD class=nav id=menuitem align=right width="19%"><A 
+      href="http://www.nws.noaa.gov/organization.html">Organization</A></TD>
+	  
+	  <!-- Start NWS Search section -->
+<td class="yellow" align="right" width="20%">
+<form action="http://www.firstgov.gov/fgsearch/index.jsp" name="query">
+<label for="search">Search</label>&nbsp;</td>
+<td align="left" class="searchinput" width="20%" nowrap>
+<input type="hidden" name="parsed" value="true">
+<input type="hidden" name="rn" value="3">
+<input type="hidden" name="in0" value="domain">
+<input type="hidden" name="dom0" value="nws.noaa.gov, weather.gov, wrh.noaa.gov, srh.noaa.gov, crh.noaa.gov, prh.noaa.gov,
+arh.noaa.gov, alaska.net/~nwsar, erh.noaa.gov, ncep.noaa.gov, spc.noaa.gov, nhc.noaa.gov, sec.noaa.gov, aviationweather.gov,
+aviationweather.noaa.gov, weather.noaa.gov, roc.noaa.gov, nohrsc.nws.gov, nwstc.noaa.gov, wdtb.noaa.gov, npmoc.navy.mil,
+ndbc.noaa.gov">
+<input type="text" name="mw0" value="Enter Search Here" id="search" size="20" maxlength="256">&nbsp;<input type="submit"
+name="Go2" value="Go"></td>
+<td width="10%"></form>&#46;</td>
+    
+<!--	<TD class=nav id=menuitem align=right width="19%"><A 
+      href="javascript:translate6('ES')"><DNT>Español</DNT></A></TD>
+-->
+    <TD vAlign=bottom align=right width=24><IMG height=23 alt="" 
+      src="/images/navbarendcap.jpg" width=24 border=0></TD></TR></TBODY></TABLE><!-- page content area -->
+<TABLE cellSpacing=0 border=0 width="85%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD class=white id=menuitem borderColor=#003399  bgColor=#0a2390 ><BR>
+      <TABLE 
+      style="BORDER-LEFT-COLOR: yellow; BORDER-BOTTOM-COLOR: yellow; BORDER-TOP-COLOR: yellow; BORDER-RIGHT-COLOR: yellow" 
+      cellPadding=0 border=3>
+        <TBODY>
+        <TR>
+          <TD noWrap width=145>
+            <FORM style="FONT-SIZE: 9pt" name=dropdown1 
+            action=http://weather.noaa.gov/cgi-bin/cc_sel_state.pl 
+            method=post><SPAN class=yellow>Text Forecast</SPAN> <SELECT 
+            style="FONT-SIZE: 8pt" onchange=statepage(); name=state> <OPTION 
+              value=DC selected>state</OPTION> <OPTION value=AL>Alabama</OPTION> 
+              <OPTION value=AK>Alaska</OPTION> <OPTION 
+              value=AZ>Arizona</OPTION> <OPTION value=AR>Arkansas</OPTION> 
+              <OPTION value=CA>California</OPTION> <OPTION 
+              value=CO>Colorado</OPTION> <OPTION value=CT>Connecticut</OPTION> 
+              <OPTION value=DE>Delaware</OPTION> <OPTION value=DC>D.C.</OPTION> 
+              <OPTION value=FL>Florida</OPTION> <OPTION 
+              value=GA>Georgia</OPTION> <OPTION value=GU>Guam</OPTION> <OPTION 
+              value=HI>Hawaii</OPTION> <OPTION value=ID>Idaho</OPTION> <OPTION 
+              value=IL>Illinois</OPTION> <OPTION value=IN>Indiana</OPTION> 
+              <OPTION value=IA>Iowa</OPTION> <OPTION value=KS>Kansas</OPTION> 
+              <OPTION value=KY>Kentucky</OPTION> <OPTION 
+              value=LA>Louisiana</OPTION> <OPTION value=ME>Maine</OPTION> 
+              <OPTION value=GU>Mar.Isl.</OPTION> <OPTION 
+              value=MD>Maryland</OPTION> <OPTION value=MA>Mass.</OPTION> <OPTION 
+              value=MI>Michigan</OPTION> <OPTION value=MN>Minnesota</OPTION> 
+              <OPTION value=MS>Mississippi</OPTION> <OPTION 
+              value=MO>Missouri</OPTION> <OPTION value=MT>Montana</OPTION> 
+              <OPTION value=NE>Nebraska</OPTION> <OPTION 
+              value=NV>Nevada</OPTION> <OPTION value=NH>N. Hampshire</OPTION> 
+              <OPTION value=NJ>New Jersey</OPTION> <OPTION value=NM>New 
+              Mexico</OPTION> <OPTION value=NY>New York</OPTION> <OPTION 
+              value=NC>North Carolina</OPTION> <OPTION value=ND>North 
+              Dakota</OPTION> <OPTION value=OH>Ohio</OPTION> <OPTION 
+              value=OK>Oklahoma</OPTION> <OPTION value=OR>Oregon</OPTION> 
+              <OPTION value=PA>Pennsylvania</OPTION> <OPTION value=PR>Puerto 
+              Rico</OPTION> <OPTION value=RI>Rhode Island</OPTION> <OPTION 
+              value=SC>South Carolina</OPTION> <OPTION value=SD>South 
+              Dakota</OPTION> <OPTION value=TN>Tennessee</OPTION> <OPTION 
+              value=TX>Texas</OPTION> <OPTION value=UT>Utah</OPTION> <OPTION 
+              value=VT>Vermont</OPTION> <OPTION value=VA>Virginia</OPTION> 
+              <OPTION value=WA>Washington</OPTION> <OPTION value=WV>West 
+              Virginia</OPTION> <OPTION value=WI>Wisconsin</OPTION> <OPTION 
+              value=WY>Wyoming</OPTION></SELECT> <INPUT style="FONT-SIZE: 8pt" type=submit alt="Go button" value=Go> 
+            </FORM></TD></TR></TBODY></TABLE><BR><SPAN class=yellow>CENTRAL 
+      SERVICES</SPAN><BR><SPAN class=yellow>&nbsp; &nbsp; Data 
+      Retrevial</SPAN><BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <A 
+      title="How to access current data and products from the Gateway server resources using FTP and Internet browsers" 
+      href="http://weather.gov/tg/dataprod.html">File/Web Services</A><BR>&nbsp; 
+      &nbsp; &nbsp; &nbsp; &nbsp; <A 
+      title="The Internet Weather Source Home Page website" 
+      href="http://weather.noaa.gov/">Internet Wx Source</A><BR><SPAN 
+      class=yellow>&nbsp; &nbsp; Data Ingest</SPAN><BR>&nbsp; &nbsp; &nbsp; 
+      &nbsp; &nbsp; <A 
+      title="A discussion and guide on how data is sent to the Gateway using the webpage" 
+      href="http://weather.gov/tg/bullguid.html">Webpage Form</A><BR>&nbsp; 
+      &nbsp; &nbsp; &nbsp; &nbsp; <A 
+      title="A discussion and guide on how data is sent to the Gateway using FTP" 
+      href="http://weather.gov/tg/ftpingest.html">File FTP</A><BR>&nbsp; &nbsp; 
+      &nbsp; &nbsp; &nbsp; <A 
+      title="A description and guide on how data is sent to the Gateway using eMail" 
+      href="http://weather.gov/tg/emailingest.html">eMail Input</A><BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <A 
+      title="A description on how data is globally exchanged using the Global Telecommunication System" 
+      href="http://weather.gov/tg/circuit.html">GTS Exchange</A><BR><BR>
+      <TABLE 
+      style="BORDER-LEFT-COLOR: yellow; BORDER-BOTTOM-COLOR: yellow; BORDER-TOP-COLOR: yellow; BORDER-RIGHT-COLOR: yellow" 
+      border=3>
+        <TBODY>
+        <TR>
+          <TD width=150>
+            <FORM name=dropdown2 
+            action=http://weather.noaa.gov/cgi-bin/cc_sel_state.pl 
+            method=post><A href="http://weather.gov/tg/UScities.html"><SPAN 
+            class=yellow>3-Day Forecast</SPAN></A><FONT 
+            style="FONT-SIZE: 9pt; COLOR: yellow"> [Text]</FONT> <LABEL 
+            for=statelist></LABEL><SELECT id=statelist style="FONT-SIZE: 9pt" 
+            tabIndex=3 onchange=statepage1(); name=state1> <OPTION 
+              selected>Selected Cities</OPTION> <OPTION 
+              value=AL>Alabama</OPTION> <OPTION value=AK>Alaska</OPTION> <OPTION 
+              value=AZ>Arizona</OPTION> <OPTION value=AR>Arkansas</OPTION> 
+              <OPTION value=CA>California</OPTION> <OPTION 
+              value=CO>Colorado</OPTION> <OPTION value=CT>Connecticut</OPTION> 
+              <OPTION value=DE>Delaware</OPTION> <OPTION value=DC>D.C.</OPTION> 
+              <OPTION value=FL>Florida</OPTION> <OPTION 
+              value=GA>Georgia</OPTION> <OPTION value=HI>Hawaii</OPTION> <OPTION 
+              value=ID>Idaho</OPTION> <OPTION value=IL>Illinois</OPTION> <OPTION 
+              value=IN>Indiana</OPTION> <OPTION value=IA>Iowa</OPTION> <OPTION 
+              value=KS>Kansas</OPTION> <OPTION value=KY>Kentucky</OPTION> 
+              <OPTION value=LA>Louisiana</OPTION> <OPTION 
+              value=ME>Maine</OPTION> <OPTION value=MD>Maryland</OPTION> <OPTION 
+              value=MA>Massachusetts</OPTION> <OPTION value=MI>Michigan</OPTION> 
+              <OPTION value=MN>Minnesota</OPTION> <OPTION 
+              value=MS>Mississippi</OPTION> <OPTION value=MO>Missouri</OPTION> 
+              <OPTION value=MT>Montana</OPTION> <OPTION 
+              value=NE>Nebraska</OPTION> <OPTION value=NV>Nevada</OPTION> 
+              <OPTION value=NH>New Hampshire</OPTION> <OPTION value=NJ>New 
+              Jersey</OPTION> <OPTION value=NM>New Mexico</OPTION> <OPTION 
+              value=NY>New York</OPTION> <OPTION value=NC>North 
+              Carolina</OPTION> <OPTION value=ND>North Dakota</OPTION> <OPTION 
+              value=OH>Ohio</OPTION> <OPTION value=OK>Oklahoma</OPTION> <OPTION 
+              value=OR>Oregon</OPTION> <OPTION value=PA>Pennsylvania</OPTION> 
+              <OPTION value=PR>Puerto Rico</OPTION> <OPTION value=RI>Rhode 
+              Island</OPTION> <OPTION value=SC>South Carolina</OPTION> <OPTION 
+              value=SD>South Dakota</OPTION> <OPTION value=TN>Tennessee</OPTION> 
+              <OPTION value=TX>Texas</OPTION> <OPTION value=UT>Utah</OPTION> 
+              <OPTION value=VT>Vermont</OPTION> <OPTION 
+              value=VA>Virginia</OPTION> <OPTION value=VA>Virgin 
+              Islands</OPTION> <OPTION value=WA>Washington</OPTION> <OPTION 
+              value=WV>West Virginia</OPTION> <OPTION 
+              value=WI>Wisconsin</OPTION> <OPTION 
+            value=WY>Wyoming</OPTION></SELECT> </FORM></TD></TR></TBODY></TABLE><BR>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD><SPAN class=yellow>Operational 
+            Information</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Details of the operations of the Central Data Switching System, including Bulletin Formats and Structure" 
+            href="http://weather.gov/tg/cominfo.html"><B>Communications</B></A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Data distribution &amp; change notice management, FOS, and bulletin heading structure support" 
+            href="http://weather.gov/datamgmt/"><B>Data 
+            Management</B></A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Time used in meteorological data" 
+            href="http://weather.gov/tg/time.html"><B>Time 
+            Reference</B></A><BR><BR><SPAN class=yellow>Broadcast 
+            Services</SPAN><BR><B>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="The International Satellite Communications System broadcast and acquisition services" 
+            href="http://weather.gov/tg/iscscvr.html">ISCS</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="The NOAA Weather Wire Service broadcast system" 
+            href="http://weather.gov/nwws/">NWWS</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="The Emergency Managers Weather Information Network" 
+            href="/emwin/">EMWIN</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="A discussion and guide on how NOAAport operates and sends data from the Gateway" 
+            href="http://weather.gov/noaaport/html/noaaport.shtml">NOAAport</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Information on the Global Maritime Distress &amp; Safety System" 
+            href="http://www.nws.noaa.gov/cgi-bin/nwsexit.pl?url=http://www.navcen.uscg.gov/marcomms/gmdss/&amp;blurb=The+US+Coast+Guard+Global+Maritime+Distress+and+Safety+System">GMDSS</A><BR><BR></B><SPAN 
+            class=yellow>Component 
+            Descriptions</SPAN><BR><B>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Information about the ASOS Monitoring Center" 
+            href="http://www.aomc.nws.noaa.gov">AOMC</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Information on the Operations of the AWIPS Network Control Center" 
+            href="http://www.nws.noaa.gov/ncf/">AWIPS/NCF</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Information on the Operations of the Gateway" 
+            href="http://weather.gov/tg/tginfo.html">The 
+            Gateway</A><BR><BR></B><SPAN class=yellow>Online 
+            Software</SPAN><BR><B>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="The WMO collection of internationally provided meteorological software" 
+            href="http://www.nws.noaa.gov/cgi-bin/nwsexit.pl?url=http://www.wmo.ch/web/ddbs/cbssoftreg.html&amp;blurb=The+WMO+Server+and+The+Software+Registry">WMO 
+            Registry</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Lists of Government developed software for meteorological codes" 
+            href="http://weather.gov/tg/software.html">NWS 
+          Registry</A><BR><br>
+		  <img src="http://weather.gov/images/firstgov_logo_color_110w.gif" alt="Firstgov.gov is the U.S. government's official web portal to all federal, state and local government web resources and services."><a href="http://www.firstgov.gov"></a></a></B></TD></TR></TBODY></TABLE></TD>
+    
+    <TD vAlign=top width=700>&nbsp; <B> <A href="http://weather.gov/index.html">Home 
+      Page</A> &gt; <A 
+      href="http://weather.gov/organization.html">Organization</A> &gt; <A 
+      href="http://weather.gov/cio/">OCIO</A> &gt; TOC </B> 
+      <TABLE cellPadding=5 border=0 width="95%"> 
+        <TBODY>
+        <TR>
+          <TD>
+            <H1 align=center>Telecommunication Operations Center</H1>
+            <H4 align=center>The National Weather Service<BR>Telecommunication 
+            Gateway (NWSTG)</H4>
+            <H3 align=center>A Central Source for Products &amp; 
+            Observations<BR>Through File Retrevial &amp; Web Page Services</H3>
+            <P><STRONG>This is the NWS central communications data switching and 
+            monitoring facility.</STRONG> Top-level organizational management of 
+            this facility is from the Office of the Chief Information Officer 
+            (OCIO). The Telecommunication Operations Center (TOC) is a component 
+            of the OCIO and manages the <STRONG>NWS Telecommunication Gateway 
+            (NWSTG)</STRONG>. The organizational structure of the TOC consists 
+            of four branches:</P>
+            <UL>
+              <LI>The Operations Support and Performance Monitoring Branch 
+              <LI>The Telecommunication Gateway Operations Branch 
+              <LI>The Telecommunication Software Branch 
+              <LI>The Telecommunication Infrastructure Branch </LI></UL>
+            <P>The NWSTG is the data central communication switching and 
+            monitoring facility and has four major operational components:</P>
+            <H4>The Central Data Switching System</H4>
+            <P>This system is called the <A class=bluelink 
+            href="http://weather.gov/tg/cominfo.html">"Gateway"</A>. The NWSTG 
+            operates and ensures continuous acquisition and dissemination of NWS 
+            and other domestic and foreign hydrometeorological data and 
+            products. The central switching system of the NWSTG controls the 
+            exchange of data with remote locations. The primary remote locations 
+            are with the NWS specialized modeling centers (AWIPS and NCF), the 
+            commercial meteorological community, and major international 
+            communication switching centers. The international switching centers 
+            are on the Main Trunk Network (MTN) of the WMO's Global 
+            Telecommunication System. This system also operates the Operational 
+            Meteorological (OPMET) data bank. It contains aviation METAR, TAF, 
+            and SIGMET data. The OPMET data bank supports the International 
+            Civil Aviation Organization (ICAO) World Area Forecast Center 
+            (WAFC). A <A class=bluelink 
+            href="http://weather.gov/tg/histgate.html">short history</A> of the 
+            central switching system describes major modernization upgrade 
+            phases that began in the 1950s.</P>
+            <P>The Gateway operates web servers and file servers. The web and 
+            file servers store all nationally-generated forecast products and 
+            globally received observational data. The web service provides 
+            browser access to retrieve data and forecasts. The file servers 
+            provide a file transfer service for retrieval of operational model 
+            forecasts and observational data.</P>
+            <H4>The ASOS Monitoring Center (AOMC)</H4>
+            <P>The AOMC monitors the quality of the sensors in thousands of ASOS 
+            automatic observing sites across the United States.</P>
+            <H4>The AWIPS Network Control Facility (NCF)</H4>
+            <P>The AWIPS/NCF manages the AWIPS Wide Area Network (WAN) and the 
+            Satellite Broadcast Network (SBN). Data streams of the SBN are 
+            called NOAAPort.</P>
+            <H4>A staff for data acquisition and dissemination management</H4>
+            <P>This staff manages the processes that determine the routing of 
+            data from the Central Data Switching System and establishes message 
+            heading identification content and use. 
+  </P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- footer -->
+<TABLE cellSpacing=2 cellPadding=2 width="80%" border=0>
+  <TBODY>
+  <TR>
+    <TD colSpan=3>
+      <HR>
+    </TD></TR>
+  <TR vAlign=top>
+    <TD class=gray><A href="http://www.doc.gov/"><SPAN class=gray>US Dept of 
+      Commerce</SPAN></A><BR><A href="http://www.noaa.gov/"><SPAN 
+      class=gray>National Oceanic and Atmospheric 
+      Administration</SPAN></A><BR>National Weather Service<BR>Office of the 
+      Chief Information Officer (OCIO)<BR>1325 East West Highway<BR>Silver 
+      Spring, MD 20910<BR>
+Page last modified: October 19, 2005 <BR>
+Page Contact: 
+      <a href="mailto:nws.isg@noaa.gov"><span class="gray">Internet Services Group</span></a></TD>
+    <TD><p><A href="http://weather.gov/disclaimer.html"><SPAN 
+      class=gray>Disclaimer</SPAN></A><BR>
+          <A 
+      href="http://weather.gov/feedback.shtml"><SPAN 
+      class=gray>Feedback</SPAN></A><br><A 
+      href="http://weather.gov/credits.html"><SPAN class=gray>Credits</SPAN></A><br><A 
+      href="http://weather.gov/glossary/"><SPAN class=gray>Glossary</SPAN></A></p>
+      <p>&nbsp;</p></TD>
+    <TD align=right>
+	<A href="http://weather.gov/notice.html"><SPAN class=gray>Privacy Policy</SPAN></A><BR> 
+	<A href="http://weather.gov/admin.php"><SPAN class=gray>About Us</SPAN></A><BR>
+	<A href="http://weather.gov/careers.php"><SPAN class=gray>Career Opportunities</SPAN></A><BR>
+    </TD></TR></TBODY></TABLE></BODY></HTML>

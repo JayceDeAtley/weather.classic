@@ -1,0 +1,954 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/main_php.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>National Digital Forecast Database XML/SOAP Service - NOAA's National Weather Service</title>
+<meta name="DC.title" content="National Digital Forecast Database XML/SOAP Service - NOAA's National Weather Service" />
+<meta name="DC.description" content="NDFD XML Web Service" />
+<meta name="DC.subject" content="Weather, Forecasts, graphical, National Oceanic Atmospheric Administration, National Weather Service" />
+<meta name="DC.date.reviewed" scheme="ISO8601" content="2005-10-06" />
+<meta name="DC.date.created" scheme="ISO8601" content="2004-05-12" />
+<!-- InstanceEndEditable -->
+<meta name="DC.format" content="text/html; charset=iso-8859-1" />
+<meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US" />
+<meta name="DC.Distribution" content="Global" />
+<meta name="DC.robot" content="all" />
+<meta name="DC.creator" content="NOAA's National Weather Service" />
+<meta name="DC.contributor" content="NWS Internet Services Team" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel="DC.rights" href="http://www.weather.gov/disclaimer.php" />
+<link rel="stylesheet" type="text/css" href="/main.css" />
+<link href="/favicon.ico" rel="shortcut icon" />
+<script type="text/javascript" language="JavaScript" src="/master.js"></script>
+<link rel='alternate' type='application/rss+xml' title='RSS' href='http://www.weather.gov/forecasts/xml/xml_changes.xml'>
+</head>
+<body onload="init()" leftmargin="0" topmargin="0" rightmargin="0" marginwidth="0" marginheight="0" bgcolor="#FFFFFF" background="/images/background1.gif">
+<!-- Start banner -->
+<!-- start banner inc -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" background="/images/topbanner.jpg">
+  <tr>
+    <td align="right" height="19"><a href="#contents"><img src="/images/skipgraphic.gif" alt="Skip Navigation Links" width="1" height="1" border="0" /></a> <a href="/"><span class="nwslink">weather.gov</span></a>&nbsp;</td>
+  </tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td width="85" rowspan="2"><a href="http://www.noaa.gov"><img src="/images/noaaleft.jpg" alt="NOAA logo-Select to go to the NOAA homepage" width="85" height="78" border="0" /></a></td>
+    <td width="500" height="20" align="center" nowrap="nowrap" background="/officenames/blank_title.jpg"><div class="source">National Oceanic and Atmospheric Administration's&nbsp;&nbsp;&nbsp;</div></td>
+    <td rowspan="2" background="/images/wfo_bkgrnd.jpg">&nbsp;</td>
+    <td width="85" rowspan="2" align="right"><a href="/"><img src="/images/nwsright.jpg" alt="Select to go to the NWS homepage" width="85" height="78" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td width="500" height="58" align="center" nowrap="nowrap" background="/officenames/blank_name.jpg"><div class="location">National Weather Service&nbsp;&nbsp;&nbsp;</div></td>
+  </tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" background="/images/navbkgrnd.gif" width="100%">
+  <tr>
+    <td align="left" valign="top" width="94"><img src="/images/navbarleft.jpg" alt="" width="94" height="23" border="0" /></td>
+    <td class="nav" width="15%" align="center" id="menuitem" nowrap="nowrap"><a href="/sitemap.php">Site Map</a></td>
+    <td class="nav" width="15%" align="right" id="menuitem"><a href="/pa/">News</a></td>
+    <td class="nav" width="20%" align="right" id="menuitem"><a href="/organization.php">Organization</a> </td>
+    <td width="20%">&nbsp;</td>
+    <td align="left" class="searchinput" width="20%" nowrap="nowrap"><!-- Begin search code -->
+      <form method="get" action="http://usasearch.gov/search" style="margin-bottom:0; margin-top:0;">
+        <input type="hidden" name="v:project" value="firstgov" />
+        <label for="query" class="yellow">Search&nbsp;&nbsp;</label>
+        <input type="text" name="query" id="query" size="10"/>
+        <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" />
+        <label for="nws" class="yellow">NWS</label>
+        <input type="radio" name="affiliate" value="noaa.gov" id="noaa" />
+        <label for="noaa" class="yellow">All NOAA</label>
+        <input type="submit" value="Go" />
+      </form>
+      <!-- End search code -->
+    </td>
+    <td width="10%">&nbsp;</td>
+    <td align="right" valign="bottom" width="24"><img src="/images/navbarendcap.jpg" alt="" width="24" height="23" border="0" /></td>
+  </tr>
+</table>
+<!-- end banner inc --><!-- end banner -->
+<table width="700px" border="0" cellspacing="0">
+  <tr>
+    <td width="119px" valign="top"><!-- start leftmenu 119px -->
+      <!-- ========== start leftmenu inc ========== -->
+
+<table width="119" border="0" cellpadding="2" cellspacing="0" bgcolor="#0A2390">
+  <!-- ********** local forecast search ********** -->
+  <tr>
+    <td class="yellow" align="center">Local forecast by<br />
+      &quot;City, St&quot; </td>
+  </tr>
+  <tr align="center" valign="top">
+    <td align="left" valign="bottom" nowrap="nowrap" class="searchinput"><form method="post" action="http://forecast.weather.gov/zipcity.php" style="margin-bottom:0; margin-top:0; ">
+        <div id="Layer2" style="position:absolute; width:200px;  height:115px; z-index:2; visibility: hidden">Search
+          by city. Press enter or select the go button to submit request</div>
+        <input type="text" id="zipcity" name="inputstring" size="9" value="City, St" onfocus="this.value='';" />
+        <input type="submit" name="Go2" value="Go" />
+      </form></td>
+  </tr>
+  <!-- ********** end local forecast search ********** -->
+  <tr>
+    <td class="white" id="menuitem">&#160;<a href="/rss/"><img src="/images/xml.gif" alt="RSS Feeds" title="RSS Feeds" width="36" height="14" border="0" /> RSS 		Feeds</a><br />
+      <a href="/warnings.php"><span class="yellow">Warnings</span></a><br />
+      &#160;<a href="/view/nationalwarnings.php?map=on">Current</a><br />
+      &#160;<a href="/alerts-beta/">By State/County...</a><br />
+      &#160;<a href="http://www.cpc.ncep.noaa.gov/products/stratosphere/uv_index/uv_alert.shtml">UV Alerts</a><br />
+    </td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><a href="/observations.php"><span class="yellow">Observations</span></a><br />
+      &#160;<a href="/radar_tab.php">Radar</a><br />
+      &#160;<a href="http://www.goes.noaa.gov/">Satellite</a><br />
+      &#160;<a href="http://www.nohrsc.nws.gov/">Snow Cover</a><br />
+      &#160;<a href="/om/osd/portal.shtml">Surface Weather...</a><br />
+      &#160;<a href="http://water.weather.gov/">Observed Precip</a> </td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><a href="/forecasts.php"><span class="yellow">Forecasts</span></a><br />
+      &#160;<a href="/organization.php">Local</a><br />
+      &#160;<a href="/forecasts/graphical/">Graphical</a><br />
+      &#160;<a href="http://aviationweather.gov/">Aviation</a><br />
+      &#160;<a href="/om/marine/home.htm">Marine</a><br />
+      &#160;<a href="http://www.nhc.noaa.gov/">Hurricanes</a><br />
+      &#160;<a href="http://www.spc.noaa.gov/">Severe Weather</a><br />
+      &#160;<a href="http://www.spc.noaa.gov/products/fire_wx/">Fire Weather</a> </td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><span class="yellow">Text Messages</span><br />
+      &#160;<a href="/view/states.php">By State</a><br />
+      &#160;<a href="/view/validProds.php">By Message Type</a><br />
+      &#160;<a href="/view/national.php?map=on">National</a> </td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><a href="/maps.php"><span class="yellow">Forecast Models</span></a><br />
+      &#160;<a href="http://www.nco.ncep.noaa.gov/pmb/nwprod/analysis/">Numerical Models</a><br />
+      &#160;Statistical Models...<br />
+      &#160;&#160;&#160;<a href="/mdl/synop/products.php">MOS Prod</a><br />
+      &#160;&#160;&#160;<a href="/mdl/gfslamp/gfslamp.shtml">GFS-LAMP Prod</a><br /></td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><span class="yellow">Climate</span><br />
+      &#160;<a href="/climate/">Past Weather</a><br />
+      &#160;<a href="/predictions.php">Predictions</a> </td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><a href="/safety.php"><span class="yellow">Weather Safety</span></a><br />
+      &#160;<a href="/nwr/">Weather Radio</a><br />
+      &#160;<a href="http://www.cpc.noaa.gov/products/expert_assessment/threats.html">Hazard Assmt...</a><br />
+      &#160;<a href="http://www.stormready.noaa.gov/">StormReady</a> /<br />
+      &#160;<a href="http://www.stormready.noaa.gov/tsunamiready/">TsunamiReady</a> <br />
+      &#160;<a href="http://weather.gov/skywarn/">Skywarn&#8482;</a></td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><a href="/education.php"><span class="yellow">Education/Outreach</span></a> </td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><a href="/information_center.php"><span class="yellow">Information Center</span></a><br />
+      &#160;<a href="http://tsunami.gov/">Tsunamis</a><br />
+      &#160;<a href="/om/publications.shtml">Publications...</a> </td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem"><a href="/feedback.php"><span class="yellow">Contact Us</span></a><br />
+      &#160;<a href="/pa/faq.php">FAQ</a><br />
+      &#160;<a href="/feedback.php">Comments...</a> </td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://www.usa.gov/"><img src="/images/usagov_logo_color_110w.gif" alt="USA.gov is the U.S. government's official web portal to all federal, state and local government web resources and services." width="110" height="30" border="0" title="USA.gov is the U.S. government's official web portal to all federal, state and local government web resources and services." /></a> </td>
+  </tr>
+</table>
+<!-- ========== end leftmenu inc ========== -->
+      <!-- end leftmenu -->
+    </td>
+    <td width="525px" valign="top"><!-- Start Content area... 525px wide -->
+      <!-- InstanceBeginEditable name="Content" -->
+      <table width="100%" border="0" cellpadding="20" cellspacing="2">
+        <tr>
+          <td width="525px" colspan="2"><a name="contents" id="contents"></a><a href="/">Home</a> &gt; <a href="/ndfd/">NDFD</a> &gt; NDFD SOAP Service</td>
+        </tr>
+        <tr>
+          <td width="525px" colspan="2">
+            <center>
+            <h1><!--  *****************  START CONTENT SECTION  *************   -->
+               National Digital Forecast Database (NDFD)<br />Simple Object Access Protocol (SOAP)<br />Web Service
+            </h1>
+            </center><br />
+
+            <p><!-- information on other NWS XML services  -->
+
+<p>
+  <center>
+    NOAA's National Weather Service offers several XML services<br />
+    |<a href="/forecasts/xml/">Forecasts</a>||<a href="/alerts-beta/">Watch/warnings</a>||<a href="/data/current_obs">Current Observations</a>||<a href="http://www.nhc.noaa.gov/aboutrss.shtml">Tropical Cyclone Advisories</a>||<a href="http://www.spc.noaa.gov/aboutrss.html">Storm Prediction Center Forecast Products</a>||<a href="/xml/index.php#xml_changes">Change Notices</a>|
+  </center>
+</p>
+</p><br />
+            <p>
+               <ol>
+                  <li><a href="#what">What is NDFD XML?</a></li>
+                  <li><a href="#why">Why provide an NDFD XML service?</a></li>
+                  <li><a href="#frequency">How often is NDFD XML updated?</a></li>
+                  <li><a href="#generate_it">How is NDFD XML generated?</a></li>
+                  <li><a href="#XML_contents">What does NDFD XML contain?</a></li>
+                  <li><a href="#use_it">How Do You Use the Web Service?</a></li>
+                  <li><a href="#degrib">What if I need lots of NDFD data or find the web service too slow?</a></li>
+                  <li><a href="#nonSOAP">What if I prefer not to use SOAP to access NDFD web services?</a></li>
+                  <li><a href="#xml_changes">NWS XML Services Change Notices </a></li>
+               </ol>
+            </p>
+
+            <a name="what" id="what"></a>
+            <p><strong>What is NDFD XML?</strong></p>
+            <p><a href="http://www.weather.gov/ndfd/">National Digital Forecast Database</a> (NDFD) Extensible Markup Language (XML) is a service providing the public, government agencies, and commercial enterprises with data from the National Weather Service&rsquo;s (NWS) digital forecast database. &nbsp; This service, which is defined in a <a href="http://products.weather.gov/PDD/Extensible_Markup_Language.pdf">Service Description Document</a>, provides NWS customers and partners the ability to request <a href="http://www.weather.gov/ndfd/technical.htm">NDFD data</a> over the internet and receive the information back in an XML format. &nbsp;The request/response process is made possible by the NDFD XML <a
+href="/cgi-bin/nwsexit.pl?url=http://www.w3.org/TR/soap/">Simple Object Access Protocol</a> (SOAP) server. &nbsp; To see the details of the NDFD XML SOAP service, go to the following URL and click on the NDFDgen or NDFDgenByDay link:</p>
+            <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXMLserver.php">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXMLserver.php</a></p>
+            <p>If the web service description provided by the SOAP server does not meet your needs, similar information is available in the following Web Service Description Language (WSDL) document:</p>
+            <p><a href="http://www.weather.gov/forecasts/xml/DWMLgen/wsdl/ndfdXML.wsdl">http://www.weather.gov/forecasts/xml/DWMLgen/wsdl/ndfdXML.wsdl</a></p>
+            <p>In addition to the SOAP technology, this service exploits XML to enhance the ease with which NWS customers and partners can integrate NDFD data into their computer applications. &nbsp; XML is a <a href="/cgi-bin/nwsexit.pl?url=http://www.w3.org/XML/">W3C standard</a> that allows its users to create languages with HTML-like tags and attributes. &nbsp; The NDFD XML language is called Digital Weather Markup Language (DWML) and its schema can be found at the following link:</p>
+            <p><a href="http://www.weather.gov/forecasts/xml/DWMLgen/schema/DWML.xsd">http://www.weather.gov/forecasts/xml/DWMLgen/schema/DWML.xsd</a></p>
+            <p>The schema defines the XML language&rsquo;s vocabulary (available tags and attributes) and syntax (expected order of tags). &nbsp; Knowing how NDFD XML is constructed, users can write programs to process the XML document to get at the data it contains.</p>
+            <p>To see a sample Digital Weather Markup Language document that conforms to the DWML schema, click on any of the following links:</p>
+            <p><a href="http://www.weather.gov/forecasts/xml/DWMLgen/schema/latest_DWML.txt">http://www.weather.gov/forecasts/xml/DWMLgen/schema/latest_DWML.txt</a><br />
+              <a href="http://www.weather.gov/forecasts/xml/DWMLgen/schema/latest_DWML_glance.txt">http://www.weather.gov/forecasts/xml/DWMLgen/schema/latest_DWML_glance.txt</a><br />
+              <a href="http://www.weather.gov/forecasts/xml/DWMLgen/schema/latest_DWMLByDay24hr.txt">http://www.weather.gov/forecasts/xml/DWMLgen/schema/latest_DWMLByDay24hr.txt</a><br />
+              <a href="http://www.weather.gov/forecasts/xml/DWMLgen/schema/latest_DWMLByDay12hr.txt">http://www.weather.gov/forecasts/xml/DWMLgen/schema/latest_DWMLByDay12hr.txt</a></p>
+
+            <a name="why" id="why"></a>
+            <p><strong>Why provide an NDFD XML service?</strong></p>
+            <p>The National Weather Service is striving to serve society&rsquo;s needs for weather information by evolving its services from a text-based paradigm to one based on making NWS information available quickly, efficiently, and in convenient and understandable forms. &nbsp; The NDFD is one example of this transformation. &nbsp; NDFD XML takes yet another step towards a digital services era by making NDFD data available for computer to computer transfer and processing. &nbsp; NWS customers and partners can then enhance the value of NDFD data through the creation of value added products.</p>
+ 
+            <p>You can provide comments on this web service from the following page.<br /><br />
+               <a href="http://www.weather.gov/feedback.php">http://www.weather.gov/feedback.php</a></p>
+
+            <a name="frequency" id="frequency"></a>
+            <p><strong>How often is NDFD XML updated?</strong></p>
+            <p>The NDFD is updated no more then hourly. We request developers using this SOAP service for local applications only make a request for a specific point no more than once an hour. The database is currently updated by 45 minutes after the hour.</p>
+
+            <a name="generate_it" id="generate_it"></a>
+            <p><strong>How is NDFD XML generated?</strong></p>
+            <p>The first step to providing NDFD XML is the creation of the NDFD. &nbsp; For more information on how NDFD is created, visit the <a href="http://www.weather.gov/ndfd/">NDFD home page</a>. &nbsp; With NDFD data available, a user application creates and sends a SOAP request to the NDFD XML SOAP server. &nbsp; The SOAP request is processed, creating the DWML document which is returned to the requesting application for processing. &nbsp; Figure 1 provides a graphical view of the process.</p>
+            <p><img src="index_image001.gif" alt="NDFD XML SOAP Process" width="520" height="108" /></p>
+            <p><strong>Figure 1. &nbsp; </strong>NDFD XML SOAP Process</p>
+            <p>You can see an example of this process in action by visiting the following URL:</p>
+            <p><a href="http://www.weather.gov/forecasts/xml/sample_products/meteogram/DWML_graph.htm">http://www.weather.gov/forecasts/xml/sample_products/meteogram/DWML_graph.htm</a></p>
+            <p>By clicking the &ldquo;submit&rdquo; button, a script will request, retrieve, and parse NDFD data and then display it in a graph.</p>
+            <p>You can download this sample application by clicking on the following links:</p>
+            <p><a href="http://www.weather.gov/forecasts/xml/sample_products/ndfdXML.tar">http://www.weather.gov/forecasts/xml/sample_products/ndfdXML.tar</a></p>
+            <p><strong>NOTE</strong>: &nbsp; The <a href="/cgi-bin/nwsexit.pl?url=http://us4.php.net/">PHP</a> script, plotMeteogramDev.php, is an example only and will not run as is. &nbsp; To run the script, you will need to install <a href="/cgi-bin/nwsexit.pl?url=http://sourceforge.net/projects/nusoap/">NuSOAP</a> and <a href="/cgi-bin/nwsexit.pl?url=http://codingtheweb.users.phpclasses.org/browse/package/257.html">VH Graph</a>. &nbsp; You can review the <a href="http://www.weather.gov/forecasts/xml/sample_products/ndfdXML_readme.txt">readme file</a> for additional information on using the sample clients.</p>
+
+            <a name="XML_contents" id="XML_contents"></a>
+            <p><strong>What does NDFD XML contain?</strong></p>
+            <p>NDFD XML contains forecasts for any combination of the following meteorological parameters:</p>
+            <p><a href="http://www.weather.gov/ndfd/technical.htm#elements">
+                        http://www.weather.gov/ndfd/technical.htm#elements</a></p>
+
+            <p>For additional information on NDFD parameter definitions and available time projection, please see the <a href="http://www.weather.gov/ndfd/technical.htm">NDFD technical page</a>.</p>
+            <p>These NDFD parameters can be retrieved in their unsummarized form using the SOAP server functions NDFDgen() or NDFDgenZip(),  or summarized over either 24- or 12-hourly periods using the functions NDFDgenByDay() or NDFDgenByDayZip. See the section below titled &quot;How Do You Use the Web Service?&quot; for more details on these two functions.</p>
+            <p>In addition to its meteorological content, NDFD XML contains meta data about the product. &nbsp; A description of the meta data as well as data XML tags and attributes can be found in the 
+               <a href="http://www.weather.gov/mdl/XML/Design/MDL_XML_Design.pdf">Digital Weather Markup Language Specification</a>
+               <a href="http://www.weather.gov/mdl/XML/Design/MDL_XML_Design.pdf">[PDF]</a>
+               <a href="http://www.weather.gov/mdl/XML/Design/MDL_XML_Design.htm">[HTML]</a>
+               <a href="http://www.weather.gov/mdl/XML/Design/MDL_XML_Design.doc">[DOC]</a></p>
+
+            <a name="use_it" id="use_it"></a>
+            <p><strong>How Do You Use the Web Service? </strong></p>
+            <p>The first step to using the web service is to create a SOAP client. &nbsp; The client creates and 
+               sends the SOAP request to the server. &nbsp; The request sent by the client then invokes one of 
+               the server functions. &nbsp; There are currently nine functions: NDFDgen(), NDFDgenLatLonList(), LatLonListSubgrid(), LatLonListLine(), 
+               LatLonListZipCode(), LatLonListSquare(), CornerPoints(), NDFDgenByDay(), and NDFDgenByDayLatLonList(). &nbsp; See the tables below for 
+               required following user supplied input:</p>
+
+            <ul>
+               <b>NDFDgen() function</b>:  Returns DWML encoded NDFD data for a point<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> latitude </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 39.0000 </td>
+                   <td width="319" valign="top"> The WGS84 latitude of the point for which you want NDFD data. &nbsp; North latitude is positive. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> longitude </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> -77.0000 </td>
+                   <td width="319" valign="top"> The WGS84 longitude of the point for which you want NDFD data. &nbsp; West longitude is negative. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> product </td>
+                   <td valign="top"> String </td>
+                   <td width="120" valign="top"> time-series </td>
+                   <td width="319" valign="top"> There are two products. &nbsp; The &ldquo;time-series&rdquo; product returns all data between the start and end times for the selected weather parameters. &nbsp; The &ldquo;glance&rdquo; product returns all data between the start and end times for the parameters maxt, mint, sky, wx, and icons </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> startTime </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top"> 2004-04-27T12:00 </td>
+                   <td width="319" valign="top"> The beginning time for which you want NDFD data. &nbsp; If the string is empty, the start time is assumed to be the earliest available time in the database. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> endTime </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top"> 2004-04-30T12:00 </td>
+                   <td width="319" valign="top"> The ending time for which you want NDFD data. &nbsp; If the string is empty, the end time is assumed to be the last available time in the database. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> weatherParameters </td>
+                   <td valign="top"> Array of Booleans </td>
+                   <td width="120" valign="top"> maxt = TRUE </td>
+                   <td width="319" valign="top">The NDFD parameters that you are requesting. &nbsp; For valid inputs see the <a href="docs/elementInputNames.php">NDFD Element Names</a> Page.</td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke NDFDgen() by selecting &quot;NDFD Data For Single Point&quot; on the following web page.</p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a></p>
+               <p>You can see a sample SOAP request for the NDFDgen() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/NDFDgen.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/NDFDgen.xml</a></p>
+            </ul>
+
+            <ul>
+               <b>NDFDgenLatLonList() function</b>:  Returns DWML encoded NDFD data for a list of points<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> listLatLon </td>
+                   <td valign="top"> string </td>
+                   <td width="120" valign="top"> 38.99,-77.02 39.70,-104.80 </td>
+                   <td width="319" valign="top"> List of WGS84 latitude and longitude pairs for the points for 
+                                                 which you want NDFD data. &nbsp; Each point's latitude and 
+                                                 longitude value is seperated by a comma.  Each pair (one latitude 
+                                                 and longitude value) is separated by a space.  Number of points 
+                                                 requested can not exceed 200.</td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> product </td>
+                   <td valign="top"> String </td>
+                   <td width="120" valign="top"> time-series </td>
+                   <td width="319" valign="top"> There are two products. &nbsp; The &ldquo;time-series&rdquo; product returns all data between the start and end times for the selected weather parameters. &nbsp; The &ldquo;glance&rdquo; product returns all data between the start and end times for the parameters maxt, mint, sky, wx, and icons </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> startTime </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top"> 2004-04-27T12:00 </td>
+                   <td width="319" valign="top"> The beginning time for which you want NDFD data. &nbsp; If the string is empty, the start time is assumed to be the earliest available time in the database. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> endTime </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top"> 2004-04-30T12:00 </td>
+                   <td width="319" valign="top"> The ending time for which you want NDFD data. &nbsp; If the string is empty, the end time is assumed to be the last available time in the database. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> weatherParameters </td>
+                   <td valign="top"> Array of Booleans </td>
+                   <td width="120" valign="top"> maxt = TRUE </td>
+                   <td width="319" valign="top">The NDFD parameters that you are requesting. &nbsp; For valid inputs see the <a href="docs/elementInputNames.php">NDFD Element Names</a> Page.</td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke NDFDgenLatLonList() by selecting &quot;NDFD Data For Multiple Points&quot; on the following web page.
+                  <b>NOTE:  Number of points requested can not exceed 200.</b></p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a></p>
+               <p>You can see a sample SOAP request for the NDFDgenLatLonList() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/NDFDgenLatLonList.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/NDFDgenLatLonList.xml</a></p>
+            </ul>
+
+            <ul>
+               <b>LatLonListSubgrid() function</b>:  Returns the WGS84 latitude and longitude values of all the NDFD grid points within a rectangular subgrid as 
+                                                     <a href="docs/indexImages/pointsSubgrid.jpg">defined by points at the lower left and upper right corners of the rectangle</a>.  
+                                                     The returned list of points is suitable for input into NDFDgenLatLonList(), NDFDgenByDayLatLonList(), and 
+                                                     GmlLatLonList() which will return NDFD data for those points. 
+                                                     <b>NOTE:</b> The subgrid locations will only form a rectangle when viewed in the NDFD 
+               <a href="http://www.weather.gov/forecasts/graphical/docs/ndfdSRS.htm#gridParams">projection applicable to the grid</a>.<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td nowrap="nowrap"> Input Name </td>
+                   <td> Type </td>
+                   <td valign="top" nowrap="nowrap"> Example </td>
+                   <td valign="top" nowrap="nowrap"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> lowerLeftLatitude </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 33.8835 </td>
+                   <td width="319" valign="top"> The WGS84 latitude of the lower left point of the rectangular subgrid for which you want NDFD grid points. &nbsp; North latitude is positive. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> lowerLeftLongitude </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> -80.0679 </td>
+                   <td width="319" valign="top"> The WGS84 longitude of the lower left point of the rectangular subgrid for which you want NDFD grid points. &nbsp; West longitude is negative. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> upperRightLatitude </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 33.8835 </td>
+                   <td width="319" valign="top"> The WGS84 latitude of the upper right point of the rectangular subgrid for which you want NDFD grid points. &nbsp; North latitude is positive. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> upperRightLongitude </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> -80.0679 </td>
+                   <td width="319" valign="top"> The WGS84 longitude of the upper right point of the rectangular subgrid for which you want NDFD grid points. &nbsp; West longitude is negative. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> resolution </td>
+                   <td valign="top"> Decimal </td>
+                   <td valign="top" nowrap="nowrap">  20.0 </td>
+                   <td valign="top"> The default resolution for NDFD data is typically 5km.  However, users can request 
+                                     latitude and longitude values for resolutions greater ( 10km, 15km, 
+                                     20km, etc.) than the native resolution so as to reduce the number of 
+                                     points returned.</td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke LatLonListSubgrid() by selecting &quot;Grid Points For Subgrid&quot; on the following web page.</p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a> </p>
+               <p>You can see a sample SOAP request for the LatLonListSubgrid() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListSubgrid.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListSubgrid.xml</a></p>
+            </ul>
+
+            <ul>
+               <b>LatLonListLine() function</b>:  Returns the WGS84 latitude and longitude values for all points on a line <a href="docs/indexImages/pointsLine.jpg">defined 
+                                                  by the line's end points</a>.  The returned list of points is suitable for input into NDFDgenLatLonList(), NDFDgenByDayLatLonList(), and 
+                                                  GmlLatLonList() which will return NDFD data for those points. 
+                                                  <b>NOTE:</b> The list of locations will only form a straight line when viewed in the NDFD 
+               <a href="http://www.weather.gov/forecasts/graphical/docs/ndfdSRS.htm#gridParams">projection applicable to the grid</a>.<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> endPoint1Lat </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 39.0000 </td>
+                   <td width="319" valign="top"> The WGS84 latitude of the first end point of the line for which you want NDFD grid points. &nbsp; North latitude is positive. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> endPoint1Lon </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> -77.0000 </td>
+                   <td width="319" valign="top"> The WGS84 longitude of the first end point of the line for which you want NDFD grid points. &nbsp; West longitude is negative. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> endPoint2Lat </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 39.0000 </td>
+                   <td width="319" valign="top"> The WGS84 latitude of the second end point of the line for which you want NDFD grid points. &nbsp; North latitude is positive. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> endPoint2Lon </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> -77.0000 </td>
+                   <td width="319" valign="top"> The WGS84 longitude of the second end point of the line for which you want NDFD grid points. &nbsp; West longitude is negative. </td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke LatLonListLine() by selecting &quot;Grid Points For A Line&quot; on the following web page.</p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a></p>
+               <p>You can see a sample SOAP request for the LatLonListLine() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListLine.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListLine.xml</a></p>
+            </ul>
+
+	    <ul>
+		<b>LatLonListZipCode() function</b>:  Returns the WGS84 latitude and longitude values for <a href="docs/indexImages/pointsZipCodes.jpg">one or more zip 
+                                                      codes</a> (50 United States and Puerto Rico). The returned list of points is suitable for input into 
+                                                      NDFDgenLatLonList(), NDFDgenByDayLatLonList(), and GmlLatLonList() which will return NDFD data for 
+                                                      those points.<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> zipCodeList </td>
+                   <td valign="top"> String </td>
+                   <td width="120" valign="top"> 20910 </td>
+                   <td width="319" valign="top"> The zip code of the area for which you want NDFD grid points.</td>
+                 </tr>
+               </table>
+               <p>You can view an example of how to invoke LatLonListZipCode() by selecting &quot;Grid Points For A Zip Code&quot; on the following web page.</p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a></p>
+               <p>You can see a sample SOAP request for the LatLonListZipCode() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListZipCode.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListZipCode.xml</a></p>
+            </ul>
+
+	    <ul>
+		<b>LatLonListCityNames() function</b>:  Returns the WGS84 latitude and longitude values for a predefined list of cities.  The cities are grouped into 
+                                                        a number of subsets to facilitate requesting data.  You can view the cities in each group by clicking on the links in 
+                                                        the table below.  The returned list of pointsis suitable for input into NDFDgenLatLonList(), 
+                                                        NDFDgenByDayLatLonList(), and GmlLatLonList() which will return NDFD data for those points.<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> displayLevel </td>
+                   <td valign="top"> Integer </td>
+                   <td width="120" valign="top"> 12 </td>
+                   <td width="319" valign="top"> 1   = <a href="docs/indexImages/level1Cities.jpg">Primary Cities</a>.<br />
+                                                 2   = <a href="docs/indexImages/level2Cities.jpg">Secondary Cities</a>.<br />
+                                                 3   = <a href="docs/indexImages/level3Cities.jpg">Cities that increase data density across the US</a> (cities 1 - 200).<br />
+                                                 4   = <a href="docs/indexImages/level4Cities.jpg">Cities that increase data density across the US</a> (cities 201 - 304).<br />
+                                                 12  = <a href="docs/indexImages/level12Cities.jpg">Combines cities in 1 and 2 above</a>.<br />
+                                                 34  = <a href="docs/indexImages/level34Cities.jpg">Combines cities in 3 and 4 above</a>.<br />
+                                                 1234 = <a href="docs/indexImages/level1234Cities.jpg">Combines cities in 1, 2, 3, and 4 above</a>.<br /></td>
+                 </tr>
+               </table>
+               <p>You can view an example of how to invoke LatLonListCityNames() by selecting &quot;Grid Points For NDFD Cities&quot; on the following web page.</p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a></p>
+               <p>You can see a sample SOAP request for the LatLonListCityNames() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListCityNames.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListCityNames.xml</a></p>
+            </ul>
+
+	     <ul>
+		<b>LatLonListSquare() function</b>:  Returns the WGS84 latitude and longitude values for a rectangle <a href="docs/indexImages/pointsSquare.jpg">defined 
+                                                     by a center point and distances in the latitudinal and longitudinal directions</a>.  The returned list of points 
+                                                     is suitable for input into NDFDgenLatLonList(), NDFDgenByDayLatLonList(), and GmlLatLonList() which will 
+                                                     return NDFD data for those points. 
+                                                     <b>NOTE:</b> The subgrid locations will only form a rectangle when viewed in the NDFD 
+               <a href="http://www.weather.gov/forecasts/graphical/docs/ndfdSRS.htm#gridParams">projection applicable to the grid</a>.<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> centerPointLat </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 39.0000 </td>
+                   <td width="319" valign="top"> The WGS84 latitude of the center or the rectangle for which you want NDFD grid points. &nbsp; North latitude is positive. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> centerPointLon </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> -77.0000 </td>
+                   <td width="319" valign="top"> The WGS84 longitude of the center or the rectangle for which you want NDFD grid points. &nbsp; West longitude is negative. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> distanceLat </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 50.0 </td>
+                   <td width="319" valign="top"> The distance from the center point in the latitudinal direction to the rectangle's East/West oriented sides. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> distanceLon </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 50.0 </td>
+                   <td width="319" valign="top"> The distance from the center point in the longitudinal direction to the rectangle's North/South oriented side. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> resolution </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top"> 20.0 </td>
+                   <td width="319" valign="top"> The default resolution for NDFD data is typically 5km.  However, users can request 
+                                     latitude and longitude values for resolutions greater ( 10km, 15km, 
+                                     20km, etc.) than the native resolution so as to reduce the number of 
+                                     points returned.</td>
+                 </tr>
+               </table>
+               <p>You can view an example of how to invoke LatLonListSquare() by selecting &quot;Grid Points For Subgrid (Central Point)&quot; on the following web page.</p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a></p>
+               <p>You can see a sample SOAP request for the LatLonListSquare() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListSquare.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/LatLonListSquare.xml</a></p>
+            </ul>
+
+            <ul>
+               <b>CornerPoints() function</b>:  Returns the WGS84 latitude and longitude values for the <a href="docs/indexImages/pointsCorners.jpg">corners of an NDFD grid</a> 
+                                                as well as the resolution required to retrieve the entire grid and still stay under the maximum allowed point 
+                                                restriction.<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td nowrap="nowrap"> Input Name </td>
+                   <td> Type </td>
+                   <td valign="top" nowrap="nowrap"> Example </td>
+                   <td valign="top" nowrap="nowrap"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> sector </td>
+                   <td valign="top"> String </td>
+                   <td width="120" valign="top"> conus </td>
+                   <td width="319" valign="top"> One of the NDFD grids (conus, alaska, nhemi, guam, hawaii, and puertori). </td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke CornerPoints() by selecting &quot;Corner Grid Points&quot; on the following web page.</p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a> </p>
+               <p>You can see a sample SOAP request for the CornerPoints() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/CornerPoints.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/CornerPoints.xml</a></p>
+            </ul>
+
+            <ul>
+               <b>GmlLatLonList() function</b>:  Returns Digital Weather GML encoded NDFD data for a list of points a single valid time.<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> listLatLon </td>
+                   <td valign="top"> string </td>
+                   <td width="120" valign="top"> 38.99,-77.02 39.70,-104.80 </td>
+                   <td width="319" valign="top"> List of WGS84 latitude and longitude pairs for the points for 
+                                                 which you want NDFD data. &nbsp; Each point's latitude and 
+                                                 longitude value is seperated by a comma.  Each pair (one latitude 
+                                                 and longitude value) is separated by a space.  Number of points 
+                                                 requested can not exceed 200.</td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> requestedTime </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top"> 2004-04-27T12:00:00 </td>
+                   <td width="319" valign="top"> The time for which you want NDFD data. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> featureType </td>
+                   <td valign="top"> string </td>
+                   <td width="120" valign="top"> Forecast_Gml2Point </td>
+                   <td width="319" valign="top"> <b>GML 2</b> Compliant Data Structure: Forecast_Gml2Point<br />
+                                                 <b>GML 3</b> Compliant Data Structures: Forecast_GmlsfPoint, Forecast_GmlObs, NdfdMultiPointCoverage<br /> 
+                                                 <b>KML 2</b> Compliant Data Structure: Ndfd_KmlPoint</td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> weatherParameters </td>
+                   <td valign="top"> Array of Booleans </td>
+                   <td width="120" valign="top"> maxt = TRUE </td>
+                   <td width="319" valign="top">The NDFD parameters that you are requesting. &nbsp; For valid inputs see the <a href="docs/elementInputNames.php">NDFD Element Names</a> Page.</td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke GmlLatLonList() by selecting &quot;NDFD Data Encoded in GML for Single Time&quot; on the following web page.
+                  <b>NOTE:  Number of points requested can not exceed 200.</b></p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a></p>
+               <p>You can see a sample SOAP request for the GmlLatLonList() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/GmlLatLonList.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/GmlLatLonList.xml</a></p>
+
+               <p>GML is an Open Geospatial Consortium standard for encoding geospatial data.  You can learn about how the National Weather Service has used 
+                  GML to develop application schema for encoding NDFD data by visiting the 
+                  <a href="http://www.weather.gov/forecasts/xml/OGC_services/">NDFD Web Feature Service home page</a>.</p>
+
+               <p>One of the advantages of NDFD GML is that it is a recognized standard.  As a result, GML and application schema derived from it are supported 
+                  by a number of GIS applications.  There is an example of importing data encoded in NDFD GML into the application ArcGIS at the following link.<br /><br /> 
+
+                  <a href="http://www.weather.gov/mdl/XML/Design/WFS_example.htm#fromFile">Tutorial on importing NDFD GML, stored in a file, into ArcGIS.</a></p>
+
+               <p>In addition to GML, the GmlLatLonList() service function can return Keyhole Markup Language (KML) encoded NDFD data.  KML can be viewed with 
+                  freely available tools like Google Earth.</p>
+            </ul>
+
+            <ul>
+               <b>GmlTimeSeries() function</b>:  Returns Digital Weather GML encoded NDFD data for a list of points during a user specified time period.<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> listLatLon </td>
+                   <td valign="top"> string </td>
+                   <td width="120" valign="top"> 38.99,-77.02 39.70,-104.80 </td>
+                   <td width="319" valign="top"> List of WGS84 latitude and longitude pairs for the points for 
+                                                 which you want NDFD data. &nbsp; Each point's latitude and 
+                                                 longitude value is seperated by a comma.  Each pair (one latitude 
+                                                 and longitude value) is separated by a space.  Number of points 
+                                                 requested can not exceed 200.</td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> startTime </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top"> 2008-01-01T00:00:00 </td>
+                   <td width="319" valign="top"> The start time for which you want NDFD data. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> endTime </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top"> 2010-12-31T23:59:59 </td>
+                   <td width="319" valign="top"> The end time for which you want NDFD data. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> compType </td>
+                   <td valign="top"> string </td>
+                   <td width="120" valign="top"> Between </td>
+                   <td width="319" valign="top"> Comparison type.  Can be IsEqual, Between, GreatThan, GreaterThanOrEqual, 
+                                                 LessThan, or LessThanOrEqual. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> featureType </td>
+                   <td valign="top"> string </td>
+                   <td width="120" valign="top"> Forecast_Gml2Point </td>
+                   <td width="319" valign="top"> <b>GML 2</b> Compliant Data Structure: Forecast_Gml2Point<br />
+                                                 <b>GML 3</b> Compliant Data Structures: Forecast_GmlsfPoint, Forecast_GmlObs, NdfdMultiPointCoverage<br /> 
+                                                 <b>KML 2</b> Compliant Data Structure: Ndfd_KmlPoint</td>
+                 </tr>
+                 <tr>
+                   <td valign="top"> propertyName </td>
+                   <td valign="top"> comma delimited list </td>
+                   <td width="120" valign="top"> maxt,mint,wx </td>
+                   <td width="319" valign="top">The NDFD element that you are requesting. &nbsp; For valid inputs see the <a href="docs/elementInputNames.php">NDFD Element Names</a> Page.</td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke GmlTimeSeries() by selecting &quot;NDFD Data Encoded in GML for Time Period&quot; on the following web page.
+                  <b>NOTE:  Number of points requested can not exceed 200.</b></p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdXML.htm</a></p>
+               <p>You can see a sample SOAP request for the GmlLatLonList() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/GmlTimeSeries.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/GmlTimeSeries.xml</a></p>
+
+               <p>GML is an Open Geospatial Consortium standard for encoding geospatial data.  You can learn about how the National Weather Service has used 
+                  GML to develop application schema for encoding NDFD data by visiting the 
+                  <a href="http://www.weather.gov/forecasts/xml/OGC_services/">NDFD Web Feature Service home page</a>.</p>
+
+               <p>One of the advantages of NDFD GML is that it is a recognized standard.  As a result, GML and application schema derived from it are supported 
+                  by a number of GIS applications.  There is an example of importing data encoded in NDFD GML into the application ArcGIS at the following link.<br /><br /> 
+
+                  <a href="http://www.weather.gov/mdl/XML/Design/WFS_example.htm#fromFile">Tutorial on importing NDFD GML, stored in a file, into ArcGIS.</a></p>
+
+               <p>In addition to GML, the GmlLatLonList() service function can return Keyhole Markup Language (KML) encoded NDFD data.  KML can be viewed with 
+                  freely available tools like Google Earth.</p>
+            </ul>
+
+            <ul>
+               <b>NDFDgenByDay() function</b>:  Returns DWML encoded NDFD data for a point.  Data for each point is summarized for either a 24- or 12-hour time period<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> latitude </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top" nowrap="nowrap"> 39.0000 </td>
+                   <td width="319" valign="top"> The WGS84 latitude of the point for which you want NDFD data. &nbsp; North latitude is positive. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> longitude </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top" nowrap="nowrap"> -77.0000 </td>
+                   <td width="319" valign="top"> The WGS84 longitude of the point for which you want NDFD data. &nbsp; West longitude is negative. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> startDate </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top" nowrap="nowrap"> 2004-04-27 </td>
+                   <td width="319" valign="top"> The beginning day for which you want NDFD data. &nbsp; If the string is empty, the start date is assumed to be the earliest available day in the database. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> numDays </td>
+                   <td valign="top"> Integer </td>
+                   <td width="120" valign="top" nowrap="nowrap"> 7 </td>
+                   <td width="319" valign="top"> The number of days worth of NDFD data you want. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> format </td>
+                   <td valign="top"> String </td>
+                   <td width="120" valign="top" nowrap="nowrap"> 12 hourly </td>
+                   <td width="319" valign="top"> There are two formats. &nbsp; The &ldquo;24 hourly&rdquo; format returns NDFD data summarized for a 24 hour period running from 6:00 AM to 6:00 AM. &nbsp; The &ldquo;12 hourly&rdquo; format summarizes NDFD data into two 12 hour periods per day that run from 6:00 AM to 6:00 PM and 6:00 PM to 6:00 AM </td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke NDFDgenByDay() by selecting &quot;NDFD Data For Single Point&quot; on the following web page.</p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdSOAPByDay.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdSOAPByDay.htm</a> </p>
+               <p>You can see a sample SOAP request for the NDFDgenByDay() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/NDFDgenByDay.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/NDFDgenByDay.xml</a></p>
+            </ul>
+
+            <ul>
+               <b>NDFDgenByDayLatLonList() function</b>Returns DWML encoded NDFD data for a list of points.  Data for each point is summarized for either a 24- or 12-hour time period<br /><br />
+               <table border="1" cellpadding="0" cellspacing="0" bordercolor="#0A2390">
+                 <tr bgcolor="#0A2390" class="nav">
+                   <td> Input Name </td>
+                   <td> Type </td>
+                   <td width="120" valign="top"> Example </td>
+                   <td width="319" valign="top"> Description </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> listLatLon </td>
+                   <td valign="top"> Decimal </td>
+                   <td width="120" valign="top" nowrap="nowrap"> 38.99,-77.02 39.70,-104.80 </td>
+                   <td width="319" valign="top"> List of WGS84 latitude and longitude pairs for the points for 
+                                    which you want NDFD data. &nbsp; Each point's latitude and 
+                                    longitude value is seperated by a comma.  Each pair (one latitude 
+                                    and longitude value) is separated by a space.  Number of points 
+                                    requested can not exceed 200.</td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> startDate </td>
+                   <td valign="top"> XML Date String </td>
+                   <td width="120" valign="top" nowrap="nowrap"> 2004-04-27 </td>
+                   <td width="319" valign="top"> The beginning day for which you want NDFD data. &nbsp; If the string is empty, the start date is assumed to be the earliest available day in the database. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> numDays </td>
+                   <td valign="top"> Integer </td>
+                   <td width="120" valign="top" nowrap="nowrap"> 7 </td>
+                   <td width="319" valign="top"> The number of days worth of NDFD data you want. </td>
+                 </tr>
+                 <tr>
+                   <td valign="top" nowrap="nowrap"> format </td>
+                   <td valign="top"> String </td>
+                   <td width="120" valign="top" nowrap="nowrap"> 12 hourly </td>
+                   <td width="319" valign="top"> There are two formats. &nbsp; The &ldquo;24 hourly&rdquo; format returns NDFD data summarized for a 24 hour period running from 6:00 AM to 6:00 AM. &nbsp; The &ldquo;12 hourly&rdquo; format summarizes NDFD data into two 12 hour periods per day that run from 6:00 AM to 6:00 PM and 6:00 PM to 6:00 AM </td>
+                 </tr>
+               </table>
+
+               <p>You can view an example of how to invoke NDFDgenByDayLatLonList() by selecting &quot;NDFD Data For Multiple Points&quot; on the following web page. 
+                  <b>NOTE:  Number of points requested can not exceed 200.</b></p>
+               <p><a href="http://www.weather.gov/forecasts/xml/SOAP_server/ndfdSOAPByDay.htm">http://www.weather.gov/forecasts/xml/SOAP_server/ndfdSOAPByDay.htm</a> </p>
+               <p>You can see a sample SOAP request for the NDFDgenByDayLatLonList() interface at
+                  <a href="http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/NDFDgenByDayLatLonList.xml">http://www.weather.gov/forecasts/xml/docs/SOAP_Requests/NDFDgenByDayLatLonList.xml</a></p>
+            </ul>
+
+            <p>Once the SOAP server returns the XML document back to the client, you can then parse the DWML using 
+               <a href="/cgi-bin/nwsexit.pl?url=http://sax.sourceforge.net/">SAX</a>, the <a href="/cgi-bin/nwsexit.pl?url=http://www.w3.org/DOM/">DOM</a>, 
+               or <a href="/cgi-bin/nwsexit.pl?url=http://www.w3.org/TR/xslt">XSLT</a>. &nbsp; The meteogramDev.php script discussed above is an example of SAX processing.</p>
+
+            <p>All latitude and longitude values provided as input or in the output DWML are based on 
+               the World Geodetic System 1984 (WGS84).  For more inforation on the NDFD spatial reference 
+               system see the <a href="http://www.weather.gov/forecasts/graphical/docs/ndfdSRS.htm">NDFD Spatial Reference System</a> page.</p>
+
+	    <p><b>Please note</b>:  There is an NDFD Web Services user forum that might be able to help developers with
+	    	                    implementation language specific issues.  The unofficial forum can be found at the following URL:<br /><br />
+				    <a href="/cgi-bin/nwsexit.pl?url=http://tech.groups.yahoo.com/group/NDFD_SOAP_Service/">http://tech.groups.yahoo.com/group/NDFD_SOAP_Service/</a></p>
+
+            <a name="degrib" id="degrib"></a>
+            <p><strong>What if I need lots of NDFD data or find the web service too slow?</strong></p>
+            <p>You should consult the <a href="http://www.weather.gov/mdl/XML/Design/WebServicesUseGuildlines.php">NDFD web services use guidelines</a>.
+            <p>The NWS has developed a program called degrib that can output NDFD data encoded in DWML.  Degrib is a C program that allows you to visualize NDFD GRIB2 data and convert these binary files into other 
+formats.  If you are a web service user who wants DWML-encoded data for a large number of NDFD points, degrib will 
+allow you to move the DWML-encoding process to your computer.  By using degrib to process the NDFD data on a local 
+computer, you may be able to significantly improve the speed with which your program is able to ingest NDFD data. The NWS makes a degrib executable available for Microsoft Windows PCs and the degrib source code available for compilation on other computer operating systems.  To download degrib software, visit the URL <a href="http://www.nws.noaa.gov/mdl/degrib/register.php">http://www.nws.noaa.gov/mdl/degrib/register.php</a>.  Once you have the degrib software running, you will need to maintain updated NDFD GRIB2 files. 
+For more information on downloading NDFD GRIB2 files from the NWS Telecommunication Operations Center, see the URL 
+<a href="http://www.nws.noaa.gov/mdl/degrib/dataloc.php">http://www.nws.noaa.gov/mdl/degrib/dataloc.php</a>.  For additional help on using degrib to convert NDFD GRIB2 files into 
+DWML see the <a href="http://www.nws.noaa.gov/mdl/degrib/tutorial.php#outputXML">degrib tutorial</a> and 
+<a href="http://www.nws.noaa.gov/mdl/degrib/txtview.php?file=degrib.txt&dir=base">man page</a>.</p>
+
+            <a name="nonSOAP" id="nonSOAP"></a>
+            <p><strong>What if I prefer not to use SOAP to access NDFD web services?</strong></p>
+            <p>Users can access NDFD data using an HTTP GET interface.  This interface does not require the user to create a SOAP client.  
+               An example request (query string) for the DWMLgen and DMWLgenByDay functionality follow:
+
+               <ol>
+                   DWMLgen<br /><br />
+                      <a href="http://www.weather.gov/forecasts/xml/sample_products/browser_interface/ndfdXMLclient.php?&lat=38.99&lon=-77.01&product=time-series&begin=2004-01-01T00:00:00&end=2011-12-03T00:00:00&maxt=maxt">http://weather.gov/forecasts/xml/sample_products/browser_interface/ndfdXMLclient.php?<br />&lat=38.99<br />&lon=-77.01<br />&product=time-series<br />&begin=2004-01-01T00:00:00<br />&end=2011-12-03T00:00:00<br />&maxt=maxt</a><br /><br />
+                   DWMLgenByDay<br /><br />
+                      <a href="http://www.weather.gov/forecasts/xml/sample_products/browser_interface/ndfdBrowserClientByDay.php?&lat=38.99&lon=-77.01&format=24+hourly&startDate=2007-12-03&numDays=7">http://weather.gov/forecasts/xml/sample_products/browser_interface/ndfdBrowserClientByDay.php?<br />&lat=38.99<br />&lon=-77.01<br />&format=24+hourly<br />&startDate=2007-12-03<br />&numDays=7</a><br /><br />
+
+                   <strong>NOTE</strong>: To submit the above examples, a user would have to change the date information to reflect the current date and time.<br /><br />   
+               </ol>
+
+               Using query strings like the ones above, a user can access the clients 
+               ndfdXMLclient.php and ndfdBrowserClientByDay.php and experience a more 
+               REST like service.  To further explore this HTTP GET based functionality, 
+               please use the following two web pages:
+
+               <ol>
+                  <a href="http://www.weather.gov/forecasts/xml/sample_products/browser_interface/ndfdXML.htm">http://www.weather.gov/forecasts/xml/sample_products/browser_interface/ndfdXML.htm</a>
+                  <a href="http://www.weather.gov/forecasts/xml/sample_products/browser_interface/ndfdBrowserByDay.htm">http://www.weather.gov/forecasts/xml/sample_products/browser_interface/ndfdBrowserByDay.htm</a>
+               </ol>
+       
+            </p>
+
+            <p>Users can also use the NDFD Web Feature Service (WFS).  The NDFD WFS uses the 
+               <a href="/cgi-bin/nwsexit.pl?url=http://www.opengeospatial.org/">Open Geospatial Consortium</a> (OGC) 
+               <a href="/cgi-bin/nwsexit.pl?url=http://www.opengeospatial.org/standards/wfs">WFS specification</a> to exchange 
+               NDFD data between a WFS client and the NDFD WFS server.  You can find out more information 
+               on this HTTP GET based protocol at the 
+               <a href="http://www.weather.gov/forecasts/xml/OGC_services/">NDFD WFS Home page</a>.
+
+            <a name="xml_changes" id="xml_changes"></a>
+            <p><strong>NWS XML Services Change Notices</strong> <a href="xml_changes.xml"><img src="/images/xml.gif" alt="XML" border="0" /></a></p>
+            <p>Below are listed recent change notices for NWS XML services. A complete <a href="xml_change_notices.php">listing</a> is available. An <a href="xml_changes.xml">RSS feed</a> of the change notices is also available. These notices are used to announce major changes, schema changes and new services.</p><p>
+	<a href="http://www.weather.gov/alerts-beta/">XML Alerts: Seeking comments on experimental CAP 1.1 messages</a><br />NWS is accepting comments through December 1, 2008 on experiemental enhanced feeds of NWS watch/warning and advisories in the CAP 1.1 format.  These feeds feature more detailed pre-parsing of NWS products than previously available and also feature ATOM based index feeds.  It is expected these feeds will replace the current feeds over the next 18 months.<br>
+	<a href="http://www.weather.gov/data/current_obs/index.php#zip">Current Obs XML: ZIP file collections of all observations available</a><br />Complete collections of the RSS and XML current observation files are now available.  These files contain all current files of the two types for those who wish to download all files at once.  These are updated hourly, normally about 10 minutes past the hour.<br>
+	<a href="http://www.weather.gov/data/current_obs/current_observation.xsd">Current Obs XML: Marine and Surf obervations elements added to schema</a><br />Effective April 16, 2008, the schema for the current observation feeds has been updated for to include marine and surf related items
+The updated XSD introduces 19 parameters related to marine and surf observations. These parameters will be included in XML observations when the data for each is available. The new parameters are:
+ water temperature: water_temp_f (fahrenheit) and water_temp_c (celsius), 
+ wind and wind gusts (knots): wind_kt and wind_gust_kt, 
+ pressure tendency: pressure_tendency_mb (millibars) and pressure_tendency_in (inches of mercury), 
+ wave height: wave_height_m (meters) and wave_height_ft (feet), 
+ wave periods (seconds), dominant and average: dominant_period_sec and average_period_sec, 
+ mean wave direction: mean_wave_dir (16 point compass) and mean_wave_degrees (360 degrees), 
+ tide information (reported by some buoys): tide_ft (feet), 
+ wave steepness (ratio of wave height to wave length): steepness, 
+ water column height (reported by DART buoys): water_column_height (meters), 
+ surf height: surf_height_ft (feet), 
+ swell: swell_dir (16 point compass), swell_degrees (360 degrees) and swell_period (seconds)<br>
+<br><i>Changes list last updated Thursday 01st 1970f January 1970 12:00:00 AM</i> 
+</p>
+
+
+            <!--  *****************  END CONTENT SECTION  *************   --></td>
+        </tr>
+      </table>
+      <!-- InstanceEndEditable -->
+      <!-- end content area -->
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td><!-- start footer -->
+      <!-- start footer inc -->
+<table width="98%" border="0" cellpadding="2" cellspacing="0">
+  <tr>
+    <td colspan="3"><hr align="right" width="98%" />
+    </td>
+  </tr>
+  <tr valign="top">
+    <td align="left" nowrap="nowrap" class="gray">
+	&#160;&#160;&#160;&#160;<a href="http://www.doc.gov"><span class="gray">US Dept of Commerce</span></a><br />
+	&#160;&#160;&#160;&#160;<a href="http://www.noaa.gov"><span class="gray">National Oceanic and Atmospheric Administration</span></a><br />
+	&#160;&#160;&#160;&#160;National Weather Service<br />
+	&#160;&#160;&#160;&#160;1325 East West Highway<br />
+	&#160;&#160;&#160;&#160;Silver Spring, MD 20910<br />
+	&#160;&#160;&#160;&#160;Page Author: <a href="mailto:w-nws.webmaster@noaa.gov">
+	<span class="gray">NWS Internet Services Team</span></a>
+	</td>
+    <td nowrap="nowrap"><a href="/disclaimer.php"><span class="gray">Disclaimer</span></a><br />
+    <a href="http://www.cio.noaa.gov/Policy_Programs/info_quality.html"><span class="gray">Information Quality</span></a><br />
+    <a href="/credits.php"><span class="gray">Credits</span></a><br />
+    <a href="/glossary/"><span class="gray">Glossary</span></a><br />
+	</td>
+    <td align="right" nowrap="nowrap"><a href="/privacy.php"><span class="gray">Privacy Policy</span></a><br />
+    <a href="http://www.rdc.noaa.gov/%7Efoia/"><span class="gray">Freedom of Information Act (FOIA)</span></a><br />
+    <a href="/admin.php"><span class="gray">About Us</span></a><br />
+    <a href="/careers.php"><span class="gray">Career Opportunities</span></a>
+	</td>
+  </tr>
+</table>
+<!-- end footer inc -->      <!-- end footer -->
+&nbsp;&nbsp;&nbsp;&nbsp; <span class="gray">Page last Modified:</span> <!-- InstanceBeginEditable name="DateLastMod" --> <span class="gray">
+      <!-- start modified date -->
+      <!-- #BeginDate format:Sw1a -->6 October, 2005 10:31 AM<!-- #EndDate -->
+      <!-- end modified date -->
+      </span> <!-- InstanceEndEditable --> </td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd -->
+</html>

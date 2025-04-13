@@ -1,0 +1,307 @@
+<!--DO NOT EDIT BELOW THIS POINT (OPENING TAGS)-->
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<!--DO NOT EDIT ABOVE THIS POINT-->
+
+
+<!--BEGIN META TAGS HERE IF NECESSARY-->
+<!--END META TAGS-->
+
+
+<!--EDIT THE PAGE TITLE-->
+<title>NWS Playtime for Kids</title>
+<!--END PAGE TITLE EDIT-->
+
+
+<!--DO NOT EDIT BELOW THIS POINT (JAVASCRIPT FUNCTION FOR AUTOMATICALLY SHOWING THE URL IN FOOTER)-->
+
+<script language="JavaScript">
+
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+function ShowURL()
+{
+  document.write(window.location.href);
+}
+
+//-->
+</script>
+<!--DO NOT EDIT ABOVE THIS POINT-->
+
+
+<!--BEGIN ANY OTHER CODE BELONGING IN THE HEAD PORTION OF THE PAGES SUCH AS JAVASCRIPT FUNCTIONS-->
+<!--END OTHER CODE BELONGING IN THE HEAD PORTION OF THE PAGES SUCH AS JAVASCRIPT FUNCTIONS-->
+
+
+<!--DO NOT EDIT HEADER BELOW THIS POINT-->
+<link rel="STYLESHEET" type="text/css" href="http://www.nws.noaa.gov/main.css">
+</head>
+<meta name="DC.title" content="NWS Office of Climate, Weather and Water Services" />
+<meta name="DC.subject" content="weather safety, awareness, education, assessment, cooperative observer program, weather spotter, tornado, hurricane, flood, rip current, lightning, thunderstorm, winter, wind chill, Aware Report, PRESTO, NOAA Weather Radio, brochures, posters">
+<meta name="DC.description" content="NWS Office of Climate, Weather and Water Service Home page." />
+<meta name="DC.creator" content="NWS Office of Climate, Weather and Water Service" />
+<meta name="DC.date.created" scheme="ISO8601" content="2001-01-01" />
+<meta name="DC.date.reviewed" scheme="ISO8601" content="2005-09-22" />
+<meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US" /> <body leftmargin="0" topmargin="0" rightmargin="0" marginwidth="0" marginheight="0" background="http://www.nws.noaa.gov/images/background1.gif">
+<table cellspacing="0" cellpadding="0" border="0" width="100%" background="http://www.nws.noaa.gov/images/topbanner.jpg">
+<tr>
+<td align="right" height="19"><a href="#content"><img src="http://www.nws.noaa.gov/images/skipgraphic.gif" alt="Skip Navigation Link" width="1" height="1" border="0"></a>
+<a href="http://www.nws.noaa.gov/"><span class="nwslink">www.nws.noaa.gov</span></a> </td>
+</tr>
+</table>
+
+  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr> 
+      <td rowspan="2"><a href="http://www.noaa.gov/"><img src="/images/noaaleft.jpg" alt="NOAA logo - Click to go to the NOAA homepage" width="85" height="78" border="0"></a></td>
+      <td align="left"><img src="/images/nws_title.jpg" alt="National Weather Service" width="500" height="20" border="0"></td>
+      <td rowspan="2" width="100%" background="http://www.nws.noaa.gov/images/wfo_bkgrnd.jpg">&nbsp;</td>
+      <td rowspan="2" align="right"><a href="http://www.nws.noaa.gov/">
+	  <img src="http://www.nws.noaa.gov/images/nwsright.jpg" alt="NWS logo - Click to go to the NWS homepage" width="85" height="78" border="0"></a></td>
+    </tr>
+    <tr> 
+      <td><img src="/om/images/ocwws-new-ban.jpg" alt="Office of Climate, Water, and Weather Services" width="500" height="58" border="0"></td>
+    </tr>
+  </table>
+  <table cellspacing="0" cellpadding="0" border="0" background="/images/navbkgrnd.gif" width="100%">
+  <tr>
+    <td align="left" valign="top" width="94"><img src="/images/navbarleft.jpg" alt="" width="94" height="23" border="0" /></td>
+
+    <td class="nav" width="15%" align="center" id="menuitem" nowrap="nowrap"><a href="http://www.weather.gov/index.htm">Home</a></td>
+    <td class="nav" width="15%" align="right" id="menuitem"><a href="http://www.weather.gov/pa/">News</a></td>
+    <td class="nav" width="20%" align="right" id="menuitem"><a href="http://www.weather.gov/organization.php">Organization</a> </td>
+    <td width="20%">&nbsp;</td>
+    <td align="left" class="searchinput" width="20%" nowrap="nowrap"><!-- Begin search code -->
+      <form method="get" action="http://firstgovsearch.gov/search" style="margin-bottom:0; margin-top:0;">
+        <input type="hidden" name="v:project" value="firstgov" />
+
+        <label for="query" class="yellow">Search&nbsp;&nbsp;</label>
+        <input type="text" name="query" id="query" size="10"/>
+        <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" />
+        <label for="nws" class="yellow">NWS</label>
+        <input type="radio" name="affiliate" value="noaa.gov" id="noaa" />
+        <label for="noaa" class="yellow">All NOAA</label>
+        <input type="submit" value="Go" />
+
+      </form>
+      <!-- End search code -->
+    </td>
+    <td width="10%">&nbsp;</td>
+    <td align="right" valign="bottom" width="24"><img src="/images/navbarendcap.jpg" alt="" width="24" height="23" border="0" /></td>
+  </tr>
+</table>
+<table cellspacing="0" cellpadding="1" border="0" width="670">
+<tr valign="top"> 
+    
+  <td width="130" rowspan="3"> 
+    <table cellspacing="0" cellpadding="2" border="0" width="130">
+        <!-- Do not remove this section. You will need this when the City,St/zip search is implemented nationwide.      <tr>
+        <td class="yellow" align="center" colspan="2">Local forecast by<br>"City, St" or zip code</td>
+        </tr>
+        <tr valign="top"> 
+        <tr align="center" valign="top">  
+        <td class="searchinput"><DIV ID="Layer2" STYLE="position:absolute; width:200px; height:115px; z-index:2; visibility: hidden">Search by city or zip code. 
+		Press enter or select the go button to submit request</DIV><form method="POST" action="http://www.srh.noaa.gov/zipcity.php"><input type="text" name="inputstring" size="10" value="City, St"></td>
+        <td class="searchinput"><input type="submit" name="Go2" value="Go"><br><br></td>
+        </tr></form> -->
+        <tr> 
+          <td class="white" id=menuitem><a href="http://www.weather.gov/os/services.shtml"><span class="yellow">Weather 
+            Services</span></a><br>
+                <a href="http://www.weather.gov/os/aviation.shtml">Aviation</a>, 
+            <a href="http://www.weather.gov/os/csd/index.shtml">Climate</a>,<br>
+                <a href="http://www.weather.gov/os/water/index.shtml">Hydro,</a> 
+            <a href="http://www.weather.gov/os/msd/index.shtml#Fire">Public</a>...<br>
+          </td>
+        </tr>
+        <tr> 
+          <td class="white" id=menuitem><a href="http://www.weather.gov/safety.php"><span class="yellow">Weather 
+            Awareness</span></a><br>
+            &nbsp;&nbsp;&nbsp;<a href="http://www.weather.gov/os/winter/index.shtml">Winter</a>,
+                             <a href="http://www.weather.gov/os/windchill/index.shtml">Wind Chill</a>,<br>
+&nbsp;&nbsp;&nbsp;<a href="http://www.weather.gov/os/severeweather/index.shtml">Tornadoes</a>,
+            <a href="http://www.floodsafety.noaa.gov/">Flood</a>...<a href="http://www.weather.gov/os/severeweather/index.shtml"></a>&nbsp;&nbsp;&nbsp;<br>
+          </td>
+        </tr>
+        <tr> 
+          <td class="white" id=menuitem><a href="http://www.weather.gov/os/edures.shtml"><span class="yellow">Education</span></a><br>
+               <a href="http://www.weather.gov/glossary/">Weather 
+            Terms</a>,<br>
+               <a href="http://www.nssl.noaa.gov/edu/resources/">Teachers</a>,            <a href="http://www.weather.gov/os/hazstats.shtml">Statistics</a></td>
+        </tr>
+        <tr> 
+          <td class="white" id=menuitem><a href="http://www.weather.gov/os/publications.shtml"><span class="yellow">Publications</span></a><br>
+                <a href="http://www.weather.gov/os/assessments/index.shtml">Assessments</a>,<br>
+                <a href="http://www.weather.gov/os/Aware/index.shtml">Aware</a>, 
+            <a href="http://www.weather.gov/os/brochures.shtml">Brochures</a>...<br>
+          </td>
+        </tr>
+        <tr> 
+          <td class="white" id=menuitem> 
+            <p><a href="/om/disemsys.shtml"><span class="yellow">Get Weather Info</span></a><br>
+                  <a href="http://www.weather.gov/">Forecasts, 
+              </a><br>
+                  <a href="http://www.ncdc.noaa.gov/oa/ncdc.html">Past 
+              Weather,</a><br>
+                  <a href="http://www.weather.gov/nwr/">Weather 
+              Radio</a>...<br>
+            </p>
+          </td>
+        </tr>
+        <tr> 
+          <td class="white" id=menuitem> <a href="http://www.weather.gov/os/other_contacts.shtml"><span class="yellow">Other 
+            Contacts</span></a><br>
+                <a href="http://www.weather.gov/im/">NWS 
+            Partners</a><br>
+                <a href="https://nsd.rdc.noaa.gov/nsd/moreinfo">Locate 
+            Staff</a><br>
+                <a href="http://www.weather.gov/os/wcm-soo.pdf">WCM/SOO list</a><br>
+                <a href="http://www.weather.gov/os/dapm_opl_esa.pdf">DAPM/OPL list</a><br></td>
+        </tr>
+        <tr> 
+          <td class="white" id=menuitem><a href="/om/contact.shtml"><span class="yellow">Questions/Comments?</span></a><br>
+               <br>
+          </td>
+        </tr>
+         <tr>
+          <td class="white" id=menuitem><a href="http://www.usa.gov"><img src="/images/usagov_logo_color_110w.gif" alt="USA.gov is the U.S. government's official web portal to all federal, state and local government web resources and services." width="110" height="30" border="1"></a></td>
+        </tr>
+      </table>
+  </td>
+    <td width="540" align="center" valign="top"> 
+      <table cellspacing="0" cellpadding="4" border="0" width="525">
+        <tr> 
+          <td align="center"><a name="content"></a>
+<!--DO NOT EDIT ABOVE THIS POINT-->
+
+
+<!--YOUR HTML FOR THE BODY OF THE PAGE GOES HERE-->
+<table width="619" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF">
+  <tr bgcolor="#0000CE"> 
+    <td> 
+      <div align="center"><b><font color="#FFFFFF">Playtime for Kids</font></b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td>
+      <table width="100%" border="0" cellspacing="10" height="305" cellpadding="0" align="center">
+        <tr> 
+          <td height="133" width="25%"> 
+            <div align="center"> 
+              <p><a href="hurricane.shtml"><img src="images/hurrspin.gif" width="75" height="75" align="absmiddle" alt="Hurricane" border="0"></a></p>
+            </div>
+            <div align="center"><a href="hurricane.shtml">Hurricanes</a></div>
+          </td>
+          <td height="133" width="25%"> 
+            <p align="center"><a href="winter.shtml"><img src="images/ic_ws.gif" width="79" height="65" align="absmiddle" alt="Winter Storm" border="0"></a> 
+              </p>
+            <p align="center"> <a href="winter.shtml">Winter 
+              Storms</a></p>
+          </td>
+          <td height="133" width="25%"> 
+            <div align="center"> 
+              <p><a href="tornadoes.shtml"><img src="images/ic_tor.gif" width="61" height="80" align="absmiddle" alt="Tornado" border="0"></a> 
+                </p>
+              <p> <a href="tornadoes.shtml">Tornadoes</a></p>
+            </div>
+          </td>
+          <td height="133" width="25%"> 
+            <div align="center"><a href="thunderstorm.shtml"><img src="images/lightningwht.gif" width="90" height="80" align="absmiddle" alt="Thunderstorm" border="0"></a> 
+            </div>
+            <div align="center"><a href="thunderstorm.shtml"><br>
+            Thunderstorms/<br>
+            Lightning</a></div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="25%" height="137"> 
+            <p align="center"><a href="flood.shtml"><img src="images/lgthse.gif" width="76" height="75" align="absmiddle" alt="Lighthouse with Flood" border="0"></a></p>
+            <p align="center"> <a href="flood.shtml">Floods</a></p>
+          </td>
+          <td width="25%" height="137"> 
+            <p align="center"><a href="safe.shtml"><img src="images/mod2.gif" width="100" height="71" align="absmiddle" alt="Masters of Disaster Program" border="0"></a></p>
+            <p align="center"> <a href="safe.shtml">Safety 
+              Tips</a></p>
+          </td>
+          <td width="25%" height="137"> 
+            <p align="center"><a href="info.shtml"><img src="images/sncld.gif" width="79" height="62" align="absmiddle" alt="Sun and Cloud" border="0"></a></p>
+            <p align="center"> <a href="info.shtml">General 
+              Weather Info</a></p>
+          </td>
+          <td width="25%" height="137"> 
+            <p align="center"><a href="fun.shtml"><img src="images/artkit.gif" width="64" height="37" align="absmiddle" alt="Paint Palette" border="0"></a></p>
+            <p align="center"> <a href="fun.shtml">Other 
+              Fun Stuff</a></p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+<!--HTML CODE FOR THE BODY OF YOUR PAGE ENDS HERE-->
+
+
+<!--EDIT FOOTER FILENAME ONLY IF DIFFERENT CONTACT INFORMATION IS NECESSARY-->
+ 
+<div align="center">
+  <hr>
+  <a href="http://www.nws.noaa.gov/om/services.shtml">Weather 
+  Services</font></a>, <a href="http://www.weather.gov/safety.php">Weather 
+  Awareness</a>, <a href="http://www.nws.noaa.gov/om/data.shtml">Data Analysis</a>, 
+  <a href="http://www.nws.noaa.gov/om/projects.shtml">Projects/Research,</a> <a href="http://www.nws.noaa.gov/education.php"><br>
+  Education</a>, <a href="http://www.nws.noaa.gov/om/publications.shtml">Publications</a>, 
+  <a href="http://www.nws.noaa.gov/om/disemsys.shtml">Get Weather Information</a>, 
+  <a href="http://www.nws.noaa.gov/im/">NWS Partners</a>, <a href="http://www.nws.noaa.gov/om/contact.shtml">Contact 
+  Us</a> </font></div>
+<hr>
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+        <tr valign="TOP"> 
+          <td class="gray"> 
+            <p class="style13"><a href="http://www.noaa.gov/">NOAA</a>, <a href="http://www.weather.gov">National 
+              Weather Service</a><br>
+              <a href="http://www.weather.gov/os/">Office of Climate, Water, and 
+              Weather Services</a><br>
+              1325 East West Highway<br>
+              Silver Spring, MD 20910 <br>
+              <a href="http://www.weather.gov/os/contact.shtml">Questions? Comments? 
+              </a><br>
+              
+              <br>
+                         </p>          </td>
+<td><a href="http://www.nws.noaa.gov/disclaimer.php"><span class="gray style13">Disclaimer</a><br>
+    <a href="http://www.weather.gov/credits.php"><span class="gray style13">Credits</span></a> <br>
+    <a href="http://www.weather.gov/glossary/"><span class="gray style13">Glossary</span></a><br></td>
+    <td align="right"><a href="http://www.weather.gov/privacy.php"><span class="gray style13">Privacy Policy</span></a><br>
+           <a href="http://www.weather.gov/admin.php"><span class="gray style13">About Us</span></a><br>
+            <a href="http://www.weather.gov/careers.php"><span class="gray style13">Career Opportunities</span>
+          </a></span></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table border="0" cellspacing="1" cellpadding="2" width="100%">
+
+<!--END FOOTER-->
+
+
+<!--DO NOT EDIT BELOW THIS POINT (DATE LAST UPDATED FUNCTION WORKS ONLY WHEN FILE SAVED IN DREAMWEAVER)-->
+<table cellpadding="0" cellspacing="0" border="0" align="left">
+  <tr>
+    <td class="gray">Last Updated: 
+      <!-- #BeginDate format:Am1 -->February 22, 2006<!-- #EndDate -->
+    </td>
+  </tr>
+</table>
+<!--DO NOT EDIT ABOVE THIS POINT-->
+
+
+</td></tr></table>
+</td></tr></table> 
+</body>
+</body>
+</html>
+<!--DO NOT EDIT ABOVE THIS POINT-->
